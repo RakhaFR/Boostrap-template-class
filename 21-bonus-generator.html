@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="id" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Component Generator - Bootstrap 5.3 Template</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="icons/bootstrap-icons.min.css">
+    <style>
+        .preview-box {
+            border: 1px dashed var(--bs-border-color);
+            border-radius: 8px;
+            padding: 3rem;
+            min-height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: radial-gradient(var(--bs-border-color) 1px, transparent 1px);
+            background-size: 20px 20px;
+            background-color: var(--bs-body-bg);
+            transition: background-color 0.3s ease;
+        }
+        .code-box {
+            background-color: #212529;
+            color: #f8f9fa;
+            border-radius: 8px;
+            padding: 1.5rem;
+            position: relative;
+        }
+        .code-box pre {
+            margin: 0;
+            white-space: pre-wrap;
+        }
+        .copy-btn-code {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        /* Style for active tab in sidebar */
+        .generator-nav .nav-link {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="bg-body-tertiary">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body sticky-top shadow-sm border-bottom">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-bootstrap-fill text-primary"></i> Template Collection
+            </a>
+            <span class="navbar-text fw-semibold">21 — Component Generator <span class="badge bg-danger ms-2">NEW</span></span>
+            <div class="ms-auto">
+                <a href="index.html" class="btn btn-outline-secondary btn-sm"><i class="bi bi-house-door"></i> Kembali ke Index</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid px-4 py-4">
+        
+        <div class="row mb-4">
+            <div class="col-12">
+                <h2 class="fw-bold"><i class="bi bi-magic text-warning me-2"></i> Interactive Component Generator</h2>
+                <p class="text-muted">Buat komponen Bootstrap kustom Anda dengan mudah. Atur opsi di sebelah kiri, lihat hasilnya, dan copy kodenya!</p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            
+            <!-- LEFT SIDEBAR: CONTROLS -->
+            <div class="col-lg-4">
+                <div class="card shadow-sm border-0 h-100">
+                    <div class="card-header bg-white py-3">
+                        <h5 class="mb-0 fw-bold"><i class="bi bi-sliders text-primary me-2"></i> Pengaturan</h5>
+                    </div>
+                    <div class="card-body p-0">
+                        <!-- Generator Tabs -->
+                        <ul class="nav nav-tabs nav-fill generator-nav" id="generatorTabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link active" id="btn-tab" data-bs-toggle="tab" data-bs-target="#btn-generator" role="tab">Button Builder</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="card-tab" data-bs-toggle="tab" data-bs-target="#card-generator" role="tab">Card Builder</a>
+                            </li>
+                        </ul>
+                        
+                        <div class="tab-content p-4" id="generatorTabsContent">
+                            
+                            <!-- 1. BUTTON GENERATOR CONTROLS -->
+                            <div class="tab-pane fade show active" id="btn-generator" role="tabpanel">
+                                
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">Teks Tombol</label>
+                                    <input type="text" class="form-control" id="btnText" value="Klik Saya">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">Warna (Variant)</label>
+                                    <select class="form-select" id="btnVariant">
+                                        <option value="primary" selected>Primary</option>
+                                        <option value="secondary">Secondary</option>
+                                        <option value="success">Success</option>
+                                        <option value="danger">Danger</option>
+                                        <option value="warning">Warning</option>
+                                        <option value="info">Info</option>
+                                        <option value="light">Light</option>
+                                        <option value="dark">Dark</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">Style</label>
+                                    <div class="btn-group w-100" role="group">
+                                        <input type="radio" class="btn-check" name="btnStyle" id="styleSolid" value="solid" autocomplete="off" checked>
+                                        <label class="btn btn-outline-primary" for="styleSolid">Solid</label>
+                                      
+                                        <input type="radio" class="btn-check" name="btnStyle" id="styleOutline" value="outline" autocomplete="off">
+                                        <label class="btn btn-outline-primary" for="styleOutline">Outline</label>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">Ukuran (Size)</label>
+                                    <select class="form-select" id="btnSize">
+                                        <option value="btn-sm">Small (.btn-sm)</option>
+                                        <option value="" selected>Default (Medium)</option>
+                                        <option value="btn-lg">Large (.btn-lg)</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">Border Radius</label>
+                                    <select class="form-select" id="btnRadius">
+                                        <option value="" selected>Default</option>
+                                        <option value="rounded-0">Square (.rounded-0)</option>
+                                        <option value="rounded-1">Small (.rounded-1)</option>
+                                        <option value="rounded-2">Medium (.rounded-2)</option>
+                                        <option value="rounded-3">Large (.rounded-3)</option>
+                                        <option value="rounded-pill">Pill (.rounded-pill)</option>
+                                        <option value="rounded-circle">Circle (.rounded-circle)</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">Shadow (Bayangan)</label>
+                                    <select class="form-select" id="btnShadow">
+                                        <option value="" selected>None</option>
+                                        <option value="shadow-sm">Small Shadow (.shadow-sm)</option>
+                                        <option value="shadow">Regular Shadow (.shadow)</option>
+                                        <option value="shadow-lg">Large Shadow (.shadow-lg)</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-check form-switch mb-3">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="btnDisabled">
+                                    <label class="form-check-label" for="btnDisabled">Status Disabled</label>
+                                </div>
+                                
+                                <div class="form-check form-switch mb-3">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="btnIcon">
+                                    <label class="form-check-label" for="btnIcon">Tambahkan Ikon</label>
+                                </div>
+
+                            </div>
+
+                            <!-- 2. CARD GENERATOR CONTROLS -->
+                            <div class="tab-pane fade" id="card-generator" role="tabpanel">
+                                
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">Judul Card</label>
+                                    <input type="text" class="form-control" id="cardTitle" value="Card Title">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">Isi Teks</label>
+                                    <textarea class="form-control" id="cardText" rows="3">Ini adalah contoh teks pada body card. Anda bisa mengatur penampilannya melalui panel ini.</textarea>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">Border Style</label>
+                                    <select class="form-select" id="cardBorder">
+                                        <option value="" selected>Default</option>
+                                        <option value="border-0">No Border (.border-0)</option>
+                                        <option value="border border-primary">Primary Border</option>
+                                        <option value="border border-success">Success Border</option>
+                                        <option value="border border-danger">Danger Border</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">Shadow (Bayangan)</label>
+                                    <select class="form-select" id="cardShadow">
+                                        <option value="" selected>None</option>
+                                        <option value="shadow-sm">Small Shadow (.shadow-sm)</option>
+                                        <option value="shadow">Regular Shadow (.shadow)</option>
+                                        <option value="shadow-lg">Large Shadow (.shadow-lg)</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">Text Alignment</label>
+                                    <div class="btn-group w-100" role="group">
+                                        <input type="radio" class="btn-check" name="cardAlign" id="alignLeft" value="text-start" autocomplete="off" checked>
+                                        <label class="btn btn-outline-secondary" for="alignLeft"><i class="bi bi-text-left"></i></label>
+                                      
+                                        <input type="radio" class="btn-check" name="cardAlign" id="alignCenter" value="text-center" autocomplete="off">
+                                        <label class="btn btn-outline-secondary" for="alignCenter"><i class="bi bi-text-center"></i></label>
+                                        
+                                        <input type="radio" class="btn-check" name="cardAlign" id="alignRight" value="text-end" autocomplete="off">
+                                        <label class="btn btn-outline-secondary" for="alignRight"><i class="bi bi-text-right"></i></label>
+                                    </div>
+                                </div>
+
+                                <div class="form-check form-switch mb-3">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="cardHeader">
+                                    <label class="form-check-label" for="cardHeader">Tampilkan Card Header</label>
+                                </div>
+                                
+                                <div class="form-check form-switch mb-3">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="cardFooter">
+                                    <label class="form-check-label" for="cardFooter">Tampilkan Card Footer</label>
+                                </div>
+
+                                <div class="form-check form-switch mb-3">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="cardBgDark">
+                                    <label class="form-check-label" for="cardBgDark">Tema Gelap (Dark Mode)</label>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT MAIN AREA: PREVIEW & CODE -->
+            <div class="col-lg-8">
+                
+                <!-- PREVIEW BOX -->
+                <div class="card shadow-sm border-0 mb-4">
+                    <div class="card-header bg-white py-3 d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0 fw-bold"><i class="bi bi-eye text-success me-2"></i> Live Preview</h5>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="previewBgDark">
+                            <label class="form-check-label small" for="previewBgDark">Preview Background Dark</label>
+                        </div>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="preview-box" id="previewContainer">
+                            <!-- Komponen Hasil Generate Akan Muncul Di Sini -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CODE BOX -->
+                <div class="card shadow-sm border-0">
+                    <div class="card-header bg-white py-3">
+                        <h5 class="mb-0 fw-bold"><i class="bi bi-code-slash text-info me-2"></i> Kode HTML</h5>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="code-box">
+                            <button class="btn btn-sm btn-outline-light copy-btn-code" id="copyCodeBtn">
+                                <i class="bi bi-clipboard"></i> Copy
+                            </button>
+                            <pre><code id="codeOutput"></code></pre>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    
+    <!-- GENERATOR LOGIC -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            const previewContainer = document.getElementById('previewContainer');
+            const codeOutput = document.getElementById('codeOutput');
+            const copyCodeBtn = document.getElementById('copyCodeBtn');
+            const previewBgDark = document.getElementById('previewBgDark');
+            let currentMode = 'btn'; // 'btn' atau 'card'
+
+            // Elemen Tab
+            const btnTab = document.getElementById('btn-tab');
+            const cardTab = document.getElementById('card-tab');
+
+            // Elemen Button Builder
+            const btnText = document.getElementById('btnText');
+            const btnVariant = document.getElementById('btnVariant');
+            const styleSolid = document.getElementById('styleSolid');
+            const styleOutline = document.getElementById('styleOutline');
+            const btnSize = document.getElementById('btnSize');
+            const btnRadius = document.getElementById('btnRadius');
+            const btnShadow = document.getElementById('btnShadow');
+            const btnDisabled = document.getElementById('btnDisabled');
+            const btnIcon = document.getElementById('btnIcon');
+
+            // Elemen Card Builder
+            const cardTitle = document.getElementById('cardTitle');
+            const cardText = document.getElementById('cardText');
+            const cardBorder = document.getElementById('cardBorder');
+            const cardShadow = document.getElementById('cardShadow');
+            const alignRadios = document.getElementsByName('cardAlign');
+            const cardHeader = document.getElementById('cardHeader');
+            const cardFooter = document.getElementById('cardFooter');
+            const cardBgDark = document.getElementById('cardBgDark');
+
+            // Event Listeners Tab Switch
+            btnTab.addEventListener('shown.bs.tab', () => { currentMode = 'btn'; generate(); });
+            cardTab.addEventListener('shown.bs.tab', () => { currentMode = 'card'; generate(); });
+
+            // Preview BG Toggle
+            previewBgDark.addEventListener('change', (e) => {
+                if (e.target.checked) {
+                    previewContainer.style.backgroundColor = '#212529'; // Dark
+                } else {
+                    previewContainer.style.backgroundColor = 'var(--bs-body-bg)'; // Light
+                }
+            });
+
+            const inputs = [
+                btnText, btnVariant, styleSolid, styleOutline, btnSize, btnRadius, btnShadow, btnDisabled, btnIcon,
+                cardTitle, cardText, cardBorder, cardShadow, cardHeader, cardFooter, cardBgDark,
+                ...Array.from(alignRadios)
+            ];
+
+            inputs.forEach(input => {
+                input.addEventListener('input', generate);
+                input.addEventListener('change', generate);
+            });
+
+            function escapeHTML(str) {
+                return str.replace(/[&<>'"]/g, 
+                    tag => ({
+                        '&': '&amp;',
+                        '<': '&lt;',
+                        '>': '&gt;',
+                        "'": '&#39;',
+                        '"': '&quot;'
+                    }[tag])
+                );
+            }
+
+            function generate() {
+                let html = '';
+
+                if (currentMode === 'btn') {
+                    const variantPrefix = styleOutline.checked ? 'btn-outline-' : 'btn-';
+                    const classes = ['btn'];
+                    
+                    classes.push(variantPrefix + btnVariant.value);
+                    if (btnSize.value) classes.push(btnSize.value);
+                    if (btnRadius.value) classes.push(btnRadius.value);
+                    if (btnShadow.value) classes.push(btnShadow.value);
+                    
+                    let attrs = '';
+                    if (btnDisabled.checked) attrs += ' disabled';
+                    
+                    let iconHtml = '';
+                    if (btnIcon.checked) {
+                        iconHtml = '<i class="bi bi-star-fill me-2"></i> ';
+                    }
+
+                    const classStr = classes.join(' ');
+                    html = `<button type="button" class="${classStr}"${attrs}>\n    ${iconHtml}${btnText.value}\n</button>`;
+                
+                } else if (currentMode === 'card') {
+                    const classes = ['card'];
+                    if (cardBorder.value) classes.push(cardBorder.value);
+                    if (cardShadow.value) classes.push(cardShadow.value);
+                    
+                    let alignClass = 'text-start';
+                    alignRadios.forEach(radio => {
+                        if (radio.checked) alignClass = radio.value;
+                    });
+                    if (alignClass !== 'text-start') classes.push(alignClass);
+                    
+                    let themeAttr = '';
+                    if (cardBgDark.checked) {
+                        classes.push('text-bg-dark'); 
+                    }
+
+                    let innerHTML = '';
+                    
+                    if (cardHeader.checked) {
+                        innerHTML += `\n  <div class="card-header">\n    Featured\n  </div>`;
+                    }
+                    
+                    innerHTML += `\n  <div class="card-body">`;
+                    innerHTML += `\n    <h5 class="card-title">${cardTitle.value}</h5>`;
+                    innerHTML += `\n    <p class="card-text">${cardText.value}</p>`;
+                    innerHTML += `\n    <a href="#" class="btn btn-primary">Go somewhere</a>`;
+                    innerHTML += `\n  </div>`;
+                    
+                    if (cardFooter.checked) {
+                        innerHTML += `\n  <div class="card-footer text-muted">\n    2 days ago\n  </div>`;
+                    }
+
+                    const classStr = classes.join(' ');
+                    html = `<div class="${classStr}" style="width: 18rem;">${innerHTML}\n</div>`;
+                }
+
+                previewContainer.innerHTML = html;
+                codeOutput.innerHTML = escapeHTML(html);
+            }
+
+            copyCodeBtn.addEventListener('click', () => {
+                const code = codeOutput.innerText || codeOutput.textContent;
+                navigator.clipboard.writeText(code).then(() => {
+                    const original = copyCodeBtn.innerHTML;
+                    copyCodeBtn.innerHTML = '<i class="bi bi-check2"></i> Copied!';
+                    copyCodeBtn.classList.replace('btn-outline-light', 'btn-success');
+                    
+                    setTimeout(() => {
+                        copyCodeBtn.innerHTML = original;
+                        copyCodeBtn.classList.replace('btn-success', 'btn-outline-light');
+                    }, 2000);
+                });
+            });
+
+            generate();
+        });
+    </script>
+</body>
+</html>
