@@ -1,0 +1,399 @@
+﻿<!DOCTYPE html>
+<html lang="id" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards - Bootstrap 5.3 Template</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="icons/bootstrap-icons.min.css">
+    <style>
+        .component-section { border: 1px dashed var(--bs-border-color); border-radius: 8px; padding: 2rem; margin-bottom: 2rem; position: relative; }
+        .section-label { position: absolute; top: -12px; left: 16px; background: var(--bs-body-bg); padding: 0 8px; font-size: 0.75rem; font-weight: 600; color: var(--bs-primary); text-transform: uppercase; letter-spacing: 1px; }
+        .img-placeholder { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); height: 180px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; }
+        .img-placeholder-sm { height: 120px; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-bootstrap-fill text-primary"></i> Template Collection</a>
+            <span class="navbar-text fw-semibold">03 â€” Cards</span>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <h1 class="display-5 fw-bold mb-2"><i class="bi bi-card-heading text-info"></i> Cards</h1>
+        <p class="lead text-muted mb-5">Card layouts, image cards, horizontal cards, card groups, header/footer, dan variasi warna.</p>
+
+        <!-- ==================== BASIC CARD ==================== -->
+        <div class="component-section">
+            <span class="section-label">Basic Card</span>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Card Title</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">Card Subtitle</h6>
+                            <p class="card-text">Contoh teks di dalam card. Card adalah container konten yang fleksibel.</p>
+                            <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card" style="width: 100%;">
+                        <div class="card-body">
+                            <h5 class="card-title">Card dengan Button</h5>
+                            <p class="card-text">Card ini berisi tombol di bawah teks. Sangat berguna untuk CTA.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Card dengan List</h5>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Item pertama</li>
+                            <li class="list-group-item">Item kedua</li>
+                            <li class="list-group-item">Item ketiga</li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" class="card-link">Card link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== IMAGE CARDS ==================== -->
+        <div class="component-section">
+            <span class="section-label">Image Cards</span>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="img-placeholder card-img-top"><i class="bi bi-image fs-1"></i></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Image Top</h5>
+                            <p class="card-text">Gambar di atas card menggunakan class card-img-top.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Image Bottom</h5>
+                            <p class="card-text">Gambar di bawah card menggunakan class card-img-bottom.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                        <div class="img-placeholder card-img-bottom"><i class="bi bi-image fs-1"></i></div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-bg-dark">
+                        <div class="img-placeholder card-img" style="opacity:0.6"><i class="bi bi-image fs-1"></i></div>
+                        <div class="card-img-overlay d-flex flex-column justify-content-end">
+                            <h5 class="card-title">Image Overlay</h5>
+                            <p class="card-text">Teks berada di atas gambar menggunakan card-img-overlay.</p>
+                            <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== CARD WITH HEADER / FOOTER ==================== -->
+        <div class="component-section">
+            <span class="section-label">Card Header & Footer</span>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            Featured
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card text-center">
+                        <div class="card-header">
+                            Featured
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                        <div class="card-footer text-body-secondary">
+                            2 days ago
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== CARD WITH NAV TABS ==================== -->
+        <div class="component-section">
+            <span class="section-label">Card dengan Navigation</span>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card text-center">
+                        <div class="card-header">
+                            <ul class="nav nav-tabs card-header-tabs">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="true" href="#">Active</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Link</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Card dengan Tabs</h5>
+                            <p class="card-text">Contoh card yang menggunakan nav tabs di header.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card text-center">
+                        <div class="card-header">
+                            <ul class="nav nav-pills card-header-pills">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#">Active</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Link</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Card dengan Pills</h5>
+                            <p class="card-text">Contoh card yang menggunakan nav pills di header.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== HORIZONTAL CARD ==================== -->
+        <div class="component-section">
+            <span class="section-label">Horizontal Card</span>
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <div class="img-placeholder rounded-start h-100"><i class="bi bi-image fs-3"></i></div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Horizontal Card</h5>
+                            <p class="card-text">Card dengan layout horizontal. Gambar di kiri, konten di kanan.</p>
+                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== CARD COLORS ==================== -->
+        <div class="component-section">
+            <span class="section-label">Card Background Colors</span>
+            <div class="row g-3">
+                <div class="col-md-4 col-lg-3">
+                    <div class="card text-bg-primary">
+                        <div class="card-body">
+                            <h5 class="card-title">Primary</h5>
+                            <p class="card-text">Card dengan background primary.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="card text-bg-secondary">
+                        <div class="card-body">
+                            <h5 class="card-title">Secondary</h5>
+                            <p class="card-text">Card dengan background secondary.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="card text-bg-success">
+                        <div class="card-body">
+                            <h5 class="card-title">Success</h5>
+                            <p class="card-text">Card dengan background success.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="card text-bg-danger">
+                        <div class="card-body">
+                            <h5 class="card-title">Danger</h5>
+                            <p class="card-text">Card dengan background danger.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="card text-bg-warning">
+                        <div class="card-body">
+                            <h5 class="card-title">Warning</h5>
+                            <p class="card-text">Card dengan background warning.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="card text-bg-info">
+                        <div class="card-body">
+                            <h5 class="card-title">Info</h5>
+                            <p class="card-text">Card dengan background info.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="card text-bg-light">
+                        <div class="card-body">
+                            <h5 class="card-title">Light</h5>
+                            <p class="card-text">Card dengan background light.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="card text-bg-dark">
+                        <div class="card-body">
+                            <h5 class="card-title">Dark</h5>
+                            <p class="card-text">Card dengan background dark.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== CARD BORDER COLORS ==================== -->
+        <div class="component-section">
+            <span class="section-label">Card Border Colors</span>
+            <div class="row g-3">
+                <div class="col-md-4 col-lg-3">
+                    <div class="card border-primary">
+                        <div class="card-body text-primary">
+                            <h5 class="card-title">Border Primary</h5>
+                            <p class="card-text">Card teks.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="card border-success">
+                        <div class="card-body text-success">
+                            <h5 class="card-title">Border Success</h5>
+                            <p class="card-text">Card teks.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="card border-danger">
+                        <div class="card-body text-danger">
+                            <h5 class="card-title">Border Danger</h5>
+                            <p class="card-text">Card teks.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="card border-warning">
+                        <div class="card-body text-warning">
+                            <h5 class="card-title">Border Warning</h5>
+                            <p class="card-text">Card teks.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== CARD GROUP ==================== -->
+        <div class="component-section">
+            <span class="section-label">Card Group</span>
+            <div class="card-group">
+                <div class="card">
+                    <div class="img-placeholder card-img-top img-placeholder-sm"><i class="bi bi-image"></i></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text.</p>
+                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img-placeholder card-img-top img-placeholder-sm"><i class="bi bi-image"></i></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This card has supporting text below.</p>
+                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img-placeholder card-img-top img-placeholder-sm"><i class="bi bi-image"></i></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text.</p>
+                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== CARD GROUP WITH FOOTER ==================== -->
+        <div class="component-section">
+            <span class="section-label">Card Group dengan Footer</span>
+            <div class="card-group">
+                <div class="card">
+                    <div class="img-placeholder card-img-top img-placeholder-sm"><i class="bi bi-image"></i></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in.</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-body-secondary">Last updated 3 mins ago</small>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img-placeholder card-img-top img-placeholder-sm"><i class="bi bi-image"></i></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-body-secondary">Last updated 3 mins ago</small>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img-placeholder card-img-top img-placeholder-sm"><i class="bi bi-image"></i></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in.</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-body-secondary">Last updated 3 mins ago</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back to Index -->
+        <div class="text-center mt-5">
+            <a href="index.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> Kembali ke Index</a>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/copy-code.js"></script>
+</body>
+</html>
+

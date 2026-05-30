@@ -1,0 +1,255 @@
+﻿<!DOCTYPE html>
+<html lang="id" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badges, Progress & Spinners - Bootstrap 5.3 Template</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="icons/bootstrap-icons.min.css">
+    <style>
+        .component-section { border: 1px dashed var(--bs-border-color); border-radius: 8px; padding: 2rem; margin-bottom: 2rem; position: relative; }
+        .section-label { position: absolute; top: -12px; left: 16px; background: var(--bs-body-bg); padding: 0 8px; font-size: 0.75rem; font-weight: 600; color: var(--bs-primary); text-transform: uppercase; letter-spacing: 1px; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-bootstrap-fill text-primary"></i> Template Collection</a>
+            <span class="navbar-text fw-semibold">11 â€” Badges, Progress & Spinners</span>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <h1 class="display-5 fw-bold mb-2"><i class="bi bi-stars text-danger"></i> Badges, Progress & Spinners</h1>
+        <p class="lead text-muted mb-5">Badge pills, progress bars, animated spinners, dan placeholders.</p>
+
+        <!-- BADGES -->
+        <h2 class="fw-bold mb-4">Badges</h2>
+        <div class="component-section">
+            <span class="section-label">Basic Badges</span>
+            <h1>Example heading <span class="badge bg-secondary">New</span></h1>
+            <h2>Example heading <span class="badge bg-secondary">New</span></h2>
+            <h3>Example heading <span class="badge bg-secondary">New</span></h3>
+            <h4>Example heading <span class="badge bg-secondary">New</span></h4>
+            <h5>Example heading <span class="badge bg-secondary">New</span></h5>
+            <h6>Example heading <span class="badge bg-secondary">New</span></h6>
+        </div>
+
+        <div class="component-section">
+            <span class="section-label">Badge Variants & Pills</span>
+            <h6 class="text-muted mb-3">Background Colors:</h6>
+            <span class="badge bg-primary">Primary</span>
+            <span class="badge bg-secondary">Secondary</span>
+            <span class="badge bg-success">Success</span>
+            <span class="badge bg-danger">Danger</span>
+            <span class="badge bg-warning text-dark">Warning</span>
+            <span class="badge bg-info text-dark">Info</span>
+            <span class="badge bg-light text-dark">Light</span>
+            <span class="badge bg-dark">Dark</span>
+            
+            <h6 class="text-muted mb-3 mt-4">Pill Badges (rounded-pill):</h6>
+            <span class="badge rounded-pill bg-primary">Primary</span>
+            <span class="badge rounded-pill bg-secondary">Secondary</span>
+            <span class="badge rounded-pill bg-success">Success</span>
+            <span class="badge rounded-pill bg-danger">Danger</span>
+            <span class="badge rounded-pill bg-warning text-dark">Warning</span>
+            <span class="badge rounded-pill bg-info text-dark">Info</span>
+            <span class="badge rounded-pill bg-light text-dark">Light</span>
+            <span class="badge rounded-pill bg-dark">Dark</span>
+
+            <h6 class="text-muted mb-3 mt-4">Badges di dalam Buttons:</h6>
+            <button type="button" class="btn btn-primary">
+                Notifications <span class="badge text-bg-secondary">4</span>
+            </button>
+            <button type="button" class="btn btn-primary position-relative mt-3 ms-3">
+                Inbox
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    99+
+                    <span class="visually-hidden">unread messages</span>
+                </span>
+            </button>
+            <button type="button" class="btn btn-primary position-relative mt-3 ms-4">
+                Profile
+                <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+                    <span class="visually-hidden">New alerts</span>
+                </span>
+            </button>
+        </div>
+
+        <!-- PROGRESS BARS -->
+        <h2 class="fw-bold mb-4 mt-5">Progress Bars</h2>
+        <div class="component-section">
+            <span class="section-label">Basic Progress</span>
+            <div class="progress mb-3" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" style="width: 0%"></div>
+            </div>
+            <div class="progress mb-3" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" style="width: 25%"></div>
+            </div>
+            <div class="progress mb-3" role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" style="width: 50%"></div>
+            </div>
+            <div class="progress mb-3" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" style="width: 75%"></div>
+            </div>
+            <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" style="width: 100%"></div>
+            </div>
+        </div>
+
+        <div class="component-section">
+            <span class="section-label">Progress Labels & Height</span>
+            <h6 class="text-muted mb-3">Labels:</h6>
+            <div class="progress mb-3" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" style="width: 25%">25%</div>
+            </div>
+            <h6 class="text-muted mb-3">Height:</h6>
+            <div class="progress mb-3" role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 1px">
+                <div class="progress-bar" style="width: 25%"></div>
+            </div>
+            <div class="progress mb-3" role="progressbar" aria-label="Example 20px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+                <div class="progress-bar" style="width: 25%"></div>
+            </div>
+        </div>
+
+        <div class="component-section">
+            <span class="section-label">Progress Backgrounds, Striped & Animated</span>
+            <h6 class="text-muted mb-3">Backgrounds:</h6>
+            <div class="progress mb-3" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar bg-success" style="width: 25%"></div>
+            </div>
+            <div class="progress mb-3" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar bg-info" style="width: 50%"></div>
+            </div>
+            <div class="progress mb-3" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar bg-warning" style="width: 75%"></div>
+            </div>
+            <div class="progress mb-3" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar bg-danger" style="width: 100%"></div>
+            </div>
+
+            <h6 class="text-muted mb-3 mt-4">Striped & Animated:</h6>
+            <div class="progress mb-3" role="progressbar" aria-label="Striped example" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar progress-bar-striped" style="width: 10%"></div>
+            </div>
+            <div class="progress mb-3" role="progressbar" aria-label="Success striped example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar progress-bar-striped bg-success" style="width: 25%"></div>
+            </div>
+            <div class="progress mb-3" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
+            </div>
+        </div>
+
+        <!-- SPINNERS -->
+        <h2 class="fw-bold mb-4 mt-5">Spinners</h2>
+        <div class="component-section">
+            <span class="section-label">Border Spinners</span>
+            <div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div>
+            <div class="spinner-border text-secondary" role="status"><span class="visually-hidden">Loading...</span></div>
+            <div class="spinner-border text-success" role="status"><span class="visually-hidden">Loading...</span></div>
+            <div class="spinner-border text-danger" role="status"><span class="visually-hidden">Loading...</span></div>
+            <div class="spinner-border text-warning" role="status"><span class="visually-hidden">Loading...</span></div>
+            <div class="spinner-border text-info" role="status"><span class="visually-hidden">Loading...</span></div>
+            <div class="spinner-border text-light" role="status"><span class="visually-hidden">Loading...</span></div>
+            <div class="spinner-border text-dark" role="status"><span class="visually-hidden">Loading...</span></div>
+        </div>
+
+        <div class="component-section">
+            <span class="section-label">Grow Spinners</span>
+            <div class="spinner-grow text-primary" role="status"><span class="visually-hidden">Loading...</span></div>
+            <div class="spinner-grow text-secondary" role="status"><span class="visually-hidden">Loading...</span></div>
+            <div class="spinner-grow text-success" role="status"><span class="visually-hidden">Loading...</span></div>
+            <div class="spinner-grow text-danger" role="status"><span class="visually-hidden">Loading...</span></div>
+            <div class="spinner-grow text-warning" role="status"><span class="visually-hidden">Loading...</span></div>
+            <div class="spinner-grow text-info" role="status"><span class="visually-hidden">Loading...</span></div>
+            <div class="spinner-grow text-light" role="status"><span class="visually-hidden">Loading...</span></div>
+            <div class="spinner-grow text-dark" role="status"><span class="visually-hidden">Loading...</span></div>
+        </div>
+
+        <div class="component-section">
+            <span class="section-label">Spinner Sizes & Buttons</span>
+            <div class="spinner-border spinner-border-sm" role="status"><span class="visually-hidden">Loading...</span></div>
+            <div class="spinner-grow spinner-grow-sm" role="status"><span class="visually-hidden">Loading...</span></div>
+            <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status"><span class="visually-hidden">Loading...</span></div>
+            <div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status"><span class="visually-hidden">Loading...</span></div>
+            
+            <h6 class="text-muted mb-3 mt-4">In Buttons:</h6>
+            <button class="btn btn-primary" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                <span class="visually-hidden" role="status">Loading...</span>
+            </button>
+            <button class="btn btn-primary" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                <span role="status">Loading...</span>
+            </button>
+            <button class="btn btn-primary" type="button" disabled>
+                <span class="spinner-grow spinner-grow-sm" aria-hidden="true"></span>
+                <span role="status">Loading...</span>
+            </button>
+        </div>
+
+        <!-- PLACEHOLDERS -->
+        <h2 class="fw-bold mb-4 mt-5">Placeholders (Skeleton Loading)</h2>
+        <div class="component-section">
+            <span class="section-label">Placeholders</span>
+            
+            <h6 class="text-muted mb-3">Card with Placeholder:</h6>
+            <div class="d-flex gap-3">
+                <!-- Asli -->
+                <div class="card" style="width: 18rem;">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#20c997"></rect></svg>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <!-- Placeholder -->
+                <div class="card" style="width: 18rem;" aria-hidden="true">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>
+                    <div class="card-body">
+                        <h5 class="card-title placeholder-glow">
+                            <span class="placeholder col-6"></span>
+                        </h5>
+                        <p class="card-text placeholder-glow">
+                            <span class="placeholder col-7"></span>
+                            <span class="placeholder col-4"></span>
+                            <span class="placeholder col-4"></span>
+                            <span class="placeholder col-6"></span>
+                            <span class="placeholder col-8"></span>
+                        </p>
+                        <a class="btn btn-primary disabled placeholder col-6" aria-disabled="true"></a>
+                    </div>
+                </div>
+            </div>
+
+            <h6 class="text-muted mb-3 mt-4">Colors & Sizes:</h6>
+            <span class="placeholder col-12"></span>
+            <span class="placeholder col-12 bg-primary"></span>
+            <span class="placeholder col-12 bg-success"></span>
+            <span class="placeholder col-12 bg-danger"></span>
+            <span class="placeholder col-12 bg-warning"></span>
+            
+            <span class="placeholder col-12 placeholder-lg"></span>
+            <span class="placeholder col-12"></span>
+            <span class="placeholder col-12 placeholder-sm"></span>
+            <span class="placeholder col-12 placeholder-xs"></span>
+            
+            <h6 class="text-muted mb-3 mt-4">Animation (Glow vs Wave):</h6>
+            <p class="placeholder-glow">
+                <span class="placeholder col-12"></span>
+            </p>
+            <p class="placeholder-wave">
+                <span class="placeholder col-12"></span>
+            </p>
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="index.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> Kembali ke Index</a>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/copy-code.js"></script>
+</body>
+</html>
+

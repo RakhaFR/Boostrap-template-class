@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<html lang="id" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonus: Sidebars - Bootstrap 5.3 Template</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="icons/bootstrap-icons.min.css">
+    <style>
+        .demo-header { background-color: var(--bs-tertiary-bg); padding: 0.5rem 1rem; border: 1px solid var(--bs-border-color); border-bottom: none; border-radius: 0.5rem 0.5rem 0 0; font-family: monospace; font-size: 0.875rem; color: var(--bs-primary); font-weight: bold; }
+        .demo-box { border: 1px solid var(--bs-border-color); border-radius: 0 0 0.5rem 0.5rem; overflow: hidden; background-color: var(--bs-body-bg); margin-bottom: 2rem; display: flex; min-height: 500px;}
+        .sidebar-light { background-color: #f8f9fa; }
+        .sidebar-dark { background-color: #212529; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-bootstrap-fill text-primary"></i> Template Collection</a>
+            <span class="navbar-text fw-semibold">19 â€” Bonus: Sidebars</span>
+        </div>
+    </nav>
+
+    <div class="container py-4">
+        <h1 class="display-5 fw-bold mb-2"><i class="bi bi-layout-sidebar text-info"></i> Sidebars</h1>
+        <p class="lead text-muted mb-5">Beberapa variasi menu samping (Sidebar) untuk dashboard atau dokumentasi.</p>
+
+        <!-- SIDEBAR 1 -->
+        <div class="demo-header">Sidebar 1: Light dengan Badge</div>
+        <div class="demo-box bg-secondary bg-opacity-10">
+            <div class="d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary border-end" style="width: 280px;">
+                <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                    <i class="bi bi-bootstrap fs-4 me-2"></i>
+                    <span class="fs-4">Sidebar</span>
+                </a>
+                <hr>
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active" aria-current="page">
+                            <i class="bi bi-house me-2"></i> Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link link-body-emphasis d-flex justify-content-between align-items-center">
+                            <span><i class="bi bi-speedometer2 me-2"></i> Dashboard</span>
+                            <span class="badge bg-danger rounded-pill">3</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link link-body-emphasis">
+                            <i class="bi bi-table me-2"></i> Orders
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link link-body-emphasis">
+                            <i class="bi bi-grid me-2"></i> Products
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link link-body-emphasis">
+                            <i class="bi bi-person-circle me-2"></i> Customers
+                        </a>
+                    </li>
+                </ul>
+                <hr>
+                <div class="dropdown">
+                    <a href="#" class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                        <strong>mdo</strong>
+                    </a>
+                    <ul class="dropdown-menu text-small shadow">
+                        <li><a class="dropdown-item" href="#">New project...</a></li>
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Sign out</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="p-4 w-100 text-center text-muted d-flex align-items-center justify-content-center">
+                <h2>Main Content Area</h2>
+            </div>
+        </div>
+
+        <!-- SIDEBAR 2 -->
+        <div class="demo-header mt-5">Sidebar 2: Dark Collapsible Menu</div>
+        <div class="demo-box bg-light">
+            <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style="width: 280px;">
+                <a href="#" class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom border-secondary">
+                    <i class="bi bi-bootstrap-fill fs-4 me-2 text-white"></i>
+                    <span class="fs-5 fw-semibold text-white">Collapsible</span>
+                </a>
+                <ul class="list-unstyled ps-0 mb-auto">
+                    <li class="mb-1">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed text-white" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+                            <i class="bi bi-chevron-right me-2 small"></i> Home
+                        </button>
+                        <div class="collapse show" id="home-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ms-4">
+                                <li><a href="#" class="link-light d-inline-flex text-decoration-none rounded py-1 opacity-75">Overview</a></li>
+                                <li><a href="#" class="link-light d-inline-flex text-decoration-none rounded py-1 opacity-75">Updates</a></li>
+                                <li><a href="#" class="link-light d-inline-flex text-decoration-none rounded py-1 opacity-75">Reports</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mb-1">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed text-white" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+                            <i class="bi bi-chevron-right me-2 small"></i> Dashboard
+                        </button>
+                        <div class="collapse" id="dashboard-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ms-4">
+                                <li><a href="#" class="link-light d-inline-flex text-decoration-none rounded py-1 opacity-75">Overview</a></li>
+                                <li><a href="#" class="link-light d-inline-flex text-decoration-none rounded py-1 opacity-75">Weekly</a></li>
+                                <li><a href="#" class="link-light d-inline-flex text-decoration-none rounded py-1 opacity-75">Monthly</a></li>
+                                <li><a href="#" class="link-light d-inline-flex text-decoration-none rounded py-1 opacity-75">Annually</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="border-top border-secondary my-3"></li>
+                    <li class="mb-1">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed text-white" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
+                            <i class="bi bi-chevron-right me-2 small"></i> Account
+                        </button>
+                        <div class="collapse" id="account-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ms-4">
+                                <li><a href="#" class="link-light d-inline-flex text-decoration-none rounded py-1 opacity-75">New...</a></li>
+                                <li><a href="#" class="link-light d-inline-flex text-decoration-none rounded py-1 opacity-75">Profile</a></li>
+                                <li><a href="#" class="link-light d-inline-flex text-decoration-none rounded py-1 opacity-75">Settings</a></li>
+                                <li><a href="#" class="link-light d-inline-flex text-decoration-none rounded py-1 opacity-75">Sign out</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="p-4 w-100 text-center text-muted d-flex align-items-center justify-content-center">
+                <h2>Main Content Area</h2>
+            </div>
+        </div>
+
+        <!-- SIDEBAR 3 -->
+        <div class="demo-header mt-5">Sidebar 3: Icon Only (Mini)</div>
+        <div class="demo-box bg-light">
+            <div class="d-flex flex-column flex-shrink-0 bg-body-tertiary border-end" style="width: 4.5rem;">
+                <a href="#" class="d-block p-3 link-body-emphasis text-decoration-none" title="Icon-only" data-bs-toggle="tooltip" data-bs-placement="right">
+                    <i class="bi bi-bootstrap-fill fs-3 text-primary"></i>
+                    <span class="visually-hidden">Icon-only</span>
+                </a>
+                <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active py-3 border-bottom rounded-0" aria-current="page" title="Home" data-bs-toggle="tooltip" data-bs-placement="right">
+                            <i class="bi bi-house fs-4"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link py-3 border-bottom rounded-0 text-secondary" title="Dashboard" data-bs-toggle="tooltip" data-bs-placement="right">
+                            <i class="bi bi-speedometer2 fs-4"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link py-3 border-bottom rounded-0 text-secondary" title="Orders" data-bs-toggle="tooltip" data-bs-placement="right">
+                            <i class="bi bi-table fs-4"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link py-3 border-bottom rounded-0 text-secondary" title="Products" data-bs-toggle="tooltip" data-bs-placement="right">
+                            <i class="bi bi-grid fs-4"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link py-3 border-bottom rounded-0 text-secondary" title="Customers" data-bs-toggle="tooltip" data-bs-placement="right">
+                            <i class="bi bi-person-circle fs-4"></i>
+                        </a>
+                    </li>
+                </ul>
+                <div class="dropdown border-top">
+                    <a href="#" class="d-flex align-items-center justify-content-center p-3 link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="https://github.com/mdo.png" alt="mdo" width="24" height="24" class="rounded-circle">
+                    </a>
+                    <ul class="dropdown-menu text-small shadow">
+                        <li><a class="dropdown-item" href="#">New project...</a></li>
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Sign out</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="p-4 w-100 text-center text-muted d-flex align-items-center justify-content-center">
+                <h2>Main Content Area</h2>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="index.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> Kembali ke Index</a>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
+<script src="js/copy-code.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html>
+<html lang="id" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utilities - Bootstrap 5.3 Template</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="icons/bootstrap-icons.min.css">
+    <style>
+        .component-section { border: 1px dashed var(--bs-border-color); border-radius: 8px; padding: 2rem; margin-bottom: 2rem; position: relative; }
+        .section-label { position: absolute; top: -12px; left: 16px; background: var(--bs-body-bg); padding: 0 8px; font-size: 0.75rem; font-weight: 600; color: var(--bs-primary); text-transform: uppercase; letter-spacing: 1px; }
+        .box-demo { background-color: rgba(13, 110, 253, 0.2); border: 1px solid rgba(13, 110, 253, 0.5); min-height: 50px; display: flex; align-items: center; justify-content: center; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-bootstrap-fill text-primary"></i> Template Collection</a>
+            <span class="navbar-text fw-semibold">15 â€” Utilities</span>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <h1 class="display-5 fw-bold mb-2"><i class="bi bi-wrench text-info"></i> Utilities</h1>
+        <p class="lead text-muted mb-5">Class bantuan untuk margin, padding, flexbox, border, shadow, text, dan background.</p>
+
+        <!-- SPACING (MARGIN & PADDING) -->
+        <div class="component-section">
+            <span class="section-label">Spacing (Margin & Padding)</span>
+            <p class="text-muted small mb-3">Format: <code>{property}{sides}-{size}</code> (contoh: <code>mt-3</code>, <code>px-4</code>, <code>my-2</code>)</p>
+            
+            <h6 class="text-muted mb-2">Padding (p, pt, pb, ps, pe, px, py):</h6>
+            <div class="d-flex flex-wrap gap-2 mb-4">
+                <div class="bg-primary text-white p-1">p-1</div>
+                <div class="bg-primary text-white p-2">p-2</div>
+                <div class="bg-primary text-white p-3">p-3</div>
+                <div class="bg-primary text-white p-4">p-4</div>
+                <div class="bg-primary text-white p-5">p-5</div>
+                <div class="bg-success text-white px-4 py-2">px-4 py-2</div>
+                <div class="bg-info text-white pt-4 pb-1">pt-4 pb-1</div>
+            </div>
+
+            <h6 class="text-muted mb-2">Margin (m, mt, mb, ms, me, mx, my):</h6>
+            <div class="d-flex flex-wrap bg-light border p-2">
+                <div class="bg-secondary text-white p-2 m-1">m-1</div>
+                <div class="bg-secondary text-white p-2 m-3">m-3</div>
+                <div class="bg-secondary text-white p-2 mx-4">mx-4</div>
+                <div class="bg-secondary text-white p-2 ms-auto">ms-auto (push to right)</div>
+            </div>
+        </div>
+
+        <!-- FLEXBOX -->
+        <div class="component-section">
+            <span class="section-label">Flexbox</span>
+            
+            <h6 class="text-muted mb-2">Justify Content (Horizontal):</h6>
+            <div class="d-flex justify-content-start bg-light border mb-2"><div class="box-demo p-2">start</div><div class="box-demo p-2">start</div></div>
+            <div class="d-flex justify-content-center bg-light border mb-2"><div class="box-demo p-2">center</div><div class="box-demo p-2">center</div></div>
+            <div class="d-flex justify-content-end bg-light border mb-2"><div class="box-demo p-2">end</div><div class="box-demo p-2">end</div></div>
+            <div class="d-flex justify-content-between bg-light border mb-2"><div class="box-demo p-2">between</div><div class="box-demo p-2">between</div><div class="box-demo p-2">between</div></div>
+            <div class="d-flex justify-content-around bg-light border mb-2"><div class="box-demo p-2">around</div><div class="box-demo p-2">around</div><div class="box-demo p-2">around</div></div>
+
+            <h6 class="text-muted mb-2 mt-4">Align Items (Vertical):</h6>
+            <div class="d-flex align-items-start bg-light border mb-2" style="height: 100px;"><div class="box-demo p-2">start</div><div class="box-demo p-2">start</div></div>
+            <div class="d-flex align-items-center bg-light border mb-2" style="height: 100px;"><div class="box-demo p-2">center</div><div class="box-demo p-2">center</div></div>
+            <div class="d-flex align-items-end bg-light border mb-2" style="height: 100px;"><div class="box-demo p-2">end</div><div class="box-demo p-2">end</div></div>
+
+            <h6 class="text-muted mb-2 mt-4">Flex Direction & Wrap:</h6>
+            <div class="d-flex flex-column bg-light border mb-2 gap-2 p-2">
+                <div class="box-demo">Column 1</div>
+                <div class="box-demo">Column 2</div>
+            </div>
+            <div class="d-flex flex-row-reverse bg-light border mb-2 gap-2 p-2">
+                <div class="box-demo">Item 1 (kanan)</div>
+                <div class="box-demo">Item 2</div>
+                <div class="box-demo">Item 3 (kiri)</div>
+            </div>
+            <div class="d-flex flex-wrap bg-light border mb-2 gap-2 p-2" style="width: 300px;">
+                <div class="box-demo px-4">Wrap 1</div>
+                <div class="box-demo px-4">Wrap 2</div>
+                <div class="box-demo px-4">Wrap 3</div>
+                <div class="box-demo px-4">Wrap 4</div>
+            </div>
+        </div>
+
+        <!-- BORDERS -->
+        <div class="component-section">
+            <span class="section-label">Borders & Radius</span>
+            
+            <h6 class="text-muted mb-2">Border Sides & Colors:</h6>
+            <div class="d-flex flex-wrap gap-3 mb-4">
+                <div class="p-3 border">border default</div>
+                <div class="p-3 border-top border-primary">border-top primary</div>
+                <div class="p-3 border-end border-success">border-end success</div>
+                <div class="p-3 border-bottom border-danger">border-bottom danger</div>
+                <div class="p-3 border-start border-warning">border-start warning</div>
+                <div class="p-3 border border-info border-2">border-2</div>
+                <div class="p-3 border border-dark border-3">border-3</div>
+            </div>
+
+            <h6 class="text-muted mb-2">Border Radius:</h6>
+            <div class="d-flex flex-wrap gap-3">
+                <div class="p-3 bg-light border rounded">rounded</div>
+                <div class="p-3 bg-light border rounded-top">rounded-top</div>
+                <div class="p-3 bg-light border rounded-end">rounded-end</div>
+                <div class="p-3 bg-light border rounded-bottom">rounded-bottom</div>
+                <div class="p-3 bg-light border rounded-start">rounded-start</div>
+                <div class="p-3 bg-light border rounded-circle" style="width:75px; height:75px;">circle</div>
+                <div class="p-3 bg-light border rounded-pill">rounded-pill width</div>
+                <div class="p-3 bg-light border rounded-0">rounded-0 (square)</div>
+                <div class="p-3 bg-light border rounded-3">rounded-3 (large)</div>
+            </div>
+        </div>
+
+        <!-- SHADOWS -->
+        <div class="component-section">
+            <span class="section-label">Shadows</span>
+            <div class="d-flex flex-wrap gap-4 p-4 bg-light">
+                <div class="p-3 mb-2 bg-body rounded shadow-none">No shadow (.shadow-none)</div>
+                <div class="p-3 mb-2 bg-body rounded shadow-sm">Small shadow (.shadow-sm)</div>
+                <div class="p-3 mb-2 bg-body rounded shadow">Regular shadow (.shadow)</div>
+                <div class="p-3 mb-2 bg-body rounded shadow-lg">Larger shadow (.shadow-lg)</div>
+            </div>
+        </div>
+
+        <!-- DISPLAY & VISIBILITY -->
+        <div class="component-section">
+            <span class="section-label">Display & Visibility</span>
+            
+            <h6 class="text-muted mb-2">Display (d-none, d-inline, d-block, d-flex, etc):</h6>
+            <div class="d-inline p-2 text-bg-primary">d-inline</div>
+            <div class="d-inline p-2 text-bg-dark">d-inline</div>
+            <span class="d-block p-2 text-bg-primary mt-2">d-block (takes full width)</span>
+            
+            <h6 class="text-muted mb-2 mt-4">Responsive Display:</h6>
+            <div class="p-3 bg-info d-none d-md-block text-white rounded">
+                Elemen ini disembunyikan di layar HP (d-none) dan akan muncul sebagai block di layar tablet/desktop (d-md-block).
+            </div>
+            <div class="p-3 bg-warning d-md-none text-dark rounded mt-2">
+                Elemen ini HANYA muncul di layar HP. Sembunyi di layar tablet ke atas (d-md-none).
+            </div>
+
+            <h6 class="text-muted mb-2 mt-4">Visibility (ruang tetap ada tapi tidak terlihat):</h6>
+            <div class="visible p-2 border mb-1">Visible element</div>
+            <div class="invisible p-2 border mb-1">Invisible element (masih memakan tempat)</div>
+            <div class="visible p-2 border mb-1">Visible element</div>
+        </div>
+
+        <!-- POSITION -->
+        <div class="component-section">
+            <span class="section-label">Position</span>
+            <div class="position-relative p-5 bg-light border rounded mb-4" style="height: 200px;">
+                <div class="position-absolute top-0 start-0 p-2 bg-primary text-white">top-0 start-0</div>
+                <div class="position-absolute top-0 end-0 p-2 bg-primary text-white">top-0 end-0</div>
+                <div class="position-absolute top-50 start-50 translate-middle p-2 bg-danger text-white rounded">Centered (top-50 start-50 translate-middle)</div>
+                <div class="position-absolute bottom-0 start-0 p-2 bg-primary text-white">bottom-0 start-0</div>
+                <div class="position-absolute bottom-0 end-0 p-2 bg-primary text-white">bottom-0 end-0</div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="index.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> Kembali ke Index</a>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/copy-code.js"></script>
+</body>
+</html>
+

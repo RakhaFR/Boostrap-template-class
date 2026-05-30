@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+<html lang="id" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alerts & Toasts - Bootstrap 5.3 Template</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="icons/bootstrap-icons.min.css">
+    <style>
+        .component-section { border: 1px dashed var(--bs-border-color); border-radius: 8px; padding: 2rem; margin-bottom: 2rem; position: relative; }
+        .section-label { position: absolute; top: -12px; left: 16px; background: var(--bs-body-bg); padding: 0 8px; font-size: 0.75rem; font-weight: 600; color: var(--bs-primary); text-transform: uppercase; letter-spacing: 1px; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-bootstrap-fill text-primary"></i> Template Collection</a>
+            <span class="navbar-text fw-semibold">08 â€” Alerts & Toasts</span>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <h1 class="display-5 fw-bold mb-2"><i class="bi bi-bell text-success"></i> Alerts & Toasts</h1>
+        <p class="lead text-muted mb-5">Alert variants, dismissible, icons, toast positions & stacking.</p>
+
+        <!-- ALERT VARIANTS -->
+        <div class="component-section">
+            <span class="section-label">Alert Variants</span>
+            <div class="alert alert-primary" role="alert">A simple <strong>primary</strong> alertâ€”check it out!</div>
+            <div class="alert alert-secondary" role="alert">A simple <strong>secondary</strong> alertâ€”check it out!</div>
+            <div class="alert alert-success" role="alert">A simple <strong>success</strong> alertâ€”check it out!</div>
+            <div class="alert alert-danger" role="alert">A simple <strong>danger</strong> alertâ€”check it out!</div>
+            <div class="alert alert-warning" role="alert">A simple <strong>warning</strong> alertâ€”check it out!</div>
+            <div class="alert alert-info" role="alert">A simple <strong>info</strong> alertâ€”check it out!</div>
+            <div class="alert alert-light" role="alert">A simple <strong>light</strong> alertâ€”check it out!</div>
+            <div class="alert alert-dark" role="alert">A simple <strong>dark</strong> alertâ€”check it out!</div>
+        </div>
+
+        <!-- ALERT WITH LINK -->
+        <div class="component-section">
+            <span class="section-label">Alert dengan Link</span>
+            <div class="alert alert-primary" role="alert">Alert primary dengan <a href="#" class="alert-link">link alert-link</a>. Klik untuk lihat.</div>
+            <div class="alert alert-danger" role="alert">Alert danger dengan <a href="#" class="alert-link">link alert-link</a>. Otomatis warna match.</div>
+        </div>
+
+        <!-- ALERT WITH CONTENT -->
+        <div class="component-section">
+            <span class="section-label">Alert dengan Konten Lengkap</span>
+            <div class="alert alert-success" role="alert">
+                <h4 class="alert-heading">Well done!</h4>
+                <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works.</p>
+                <hr>
+                <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+            </div>
+        </div>
+
+        <!-- DISMISSIBLE ALERTS -->
+        <div class="component-section">
+            <span class="section-label">Dismissible Alerts</span>
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Holy guacamole!</strong> Alert ini bisa ditutup. Klik tombol X di kanan.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>Error!</strong> Sesuatu yang salah telah terjadi. Silakan coba lagi.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <i class="bi bi-check-circle-fill me-2"></i> <strong>Sukses!</strong> Data berhasil disimpan.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        </div>
+
+        <!-- ALERTS WITH ICONS -->
+        <div class="component-section">
+            <span class="section-label">Alerts dengan Icons</span>
+            <div class="alert alert-primary d-flex align-items-center" role="alert">
+                <i class="bi bi-info-circle-fill me-2 fs-5"></i>
+                <div>An example alert with an icon</div>
+            </div>
+            <div class="alert alert-success d-flex align-items-center" role="alert">
+                <i class="bi bi-check-circle-fill me-2 fs-5"></i>
+                <div>An example success alert with an icon</div>
+            </div>
+            <div class="alert alert-warning d-flex align-items-center" role="alert">
+                <i class="bi bi-exclamation-triangle-fill me-2 fs-5"></i>
+                <div>An example warning alert with an icon</div>
+            </div>
+            <div class="alert alert-danger d-flex align-items-center" role="alert">
+                <i class="bi bi-exclamation-octagon-fill me-2 fs-5"></i>
+                <div>An example danger alert with an icon</div>
+            </div>
+        </div>
+
+        <hr class="my-5">
+        <h2 class="fw-bold mb-4"><i class="bi bi-bell"></i> Toasts</h2>
+
+        <!-- BASIC TOAST -->
+        <div class="component-section">
+            <span class="section-label">Basic Toast</span>
+            <button type="button" class="btn btn-primary mb-3" id="liveToastBtn">Show Live Toast</button>
+            <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                        <strong class="me-auto">Bootstrap</strong>
+                        <small>11 mins ago</small>
+                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                    <div class="toast-body">Hello, world! This is a toast message.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TOAST VARIANTS (static for preview) -->
+        <div class="component-section">
+            <span class="section-label">Toast Variants (Static Preview)</span>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+                        <div class="toast-header">
+                            <div class="rounded me-2 bg-primary" style="width:20px;height:20px;"></div>
+                            <strong class="me-auto">Bootstrap</strong>
+                            <small class="text-body-secondary">just now</small>
+                            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                        </div>
+                        <div class="toast-body">See? Just like this.</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+                        <div class="toast-header">
+                            <div class="rounded me-2 bg-success" style="width:20px;height:20px;"></div>
+                            <strong class="me-auto">Success</strong>
+                            <small class="text-body-secondary">2 mins ago</small>
+                            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                        </div>
+                        <div class="toast-body">Data berhasil disimpan!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SIMPLE TOAST (tanpa header) -->
+        <div class="component-section">
+            <span class="section-label">Simple Toast (tanpa header)</span>
+            <div class="toast show align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="d-flex">
+                    <div class="toast-body">Hello, world! This is a toast message.</div>
+                    <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="toast show align-items-center text-bg-primary border-0 mt-3" role="alert">
+                <div class="d-flex">
+                    <div class="toast-body">Hello, world! Toast dengan background primary.</div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="toast show align-items-center text-bg-success border-0 mt-3" role="alert">
+                <div class="d-flex">
+                    <div class="toast-body"><i class="bi bi-check-circle me-1"></i> Berhasil disimpan!</div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="toast show align-items-center text-bg-danger border-0 mt-3" role="alert">
+                <div class="d-flex">
+                    <div class="toast-body"><i class="bi bi-x-circle me-1"></i> Terjadi kesalahan!</div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- STACKING TOASTS -->
+        <div class="component-section">
+            <span class="section-label">Stacking Toasts</span>
+            <div class="toast-container position-static">
+                <div class="toast show" role="alert"><div class="toast-header"><strong class="me-auto">Notification 1</strong><small class="text-body-secondary">just now</small><button type="button" class="btn-close" data-bs-dismiss="toast"></button></div><div class="toast-body">See? Toasts bisa ditumpuk!</div></div>
+                <div class="toast show" role="alert"><div class="toast-header"><strong class="me-auto">Notification 2</strong><small class="text-body-secondary">2 secs ago</small><button type="button" class="btn-close" data-bs-dismiss="toast"></button></div><div class="toast-body">Ini toast kedua di bawahnya.</div></div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="index.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> Kembali ke Index</a>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        const toastTrigger = document.getElementById('liveToastBtn');
+        const toastLiveExample = document.getElementById('liveToast');
+        if (toastTrigger) {
+            toastTrigger.addEventListener('click', () => {
+                const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+                toastBootstrap.show();
+            });
+        }
+    </script>
+<script src="js/copy-code.js"></script>
+</body>
+</html>
+

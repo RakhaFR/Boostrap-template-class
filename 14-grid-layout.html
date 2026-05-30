@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html lang="id" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid & Layout - Bootstrap 5.3 Template</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="icons/bootstrap-icons.min.css">
+    <style>
+        .component-section { border: 1px dashed var(--bs-border-color); border-radius: 8px; padding: 2rem; margin-bottom: 2rem; position: relative; }
+        .section-label { position: absolute; top: -12px; left: 16px; background: var(--bs-body-bg); padding: 0 8px; font-size: 0.75rem; font-weight: 600; color: var(--bs-primary); text-transform: uppercase; letter-spacing: 1px; }
+        .box { background-color: rgba(39, 128, 227, 0.2); border: 1px solid rgba(39, 128, 227, 0.5); padding: 10px; text-align: center; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-bootstrap-fill text-primary"></i> Template Collection</a>
+            <span class="navbar-text fw-semibold">14 â€” Grid & Layout</span>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <h1 class="display-5 fw-bold mb-2"><i class="bi bi-grid-3x3-gap text-success"></i> Grid & Layout</h1>
+        <p class="lead text-muted mb-5">Sistem Grid 12 kolom Bootstrap, containers, gutters, dan layout utilities.</p>
+
+        <!-- AUTO-LAYOUT COLUMNS -->
+        <div class="component-section">
+            <span class="section-label">Auto-layout Columns</span>
+            <div class="row mb-3">
+                <div class="col"><div class="box">1 of 2 (col)</div></div>
+                <div class="col"><div class="box">2 of 2 (col)</div></div>
+            </div>
+            <div class="row mb-3">
+                <div class="col"><div class="box">1 of 3 (col)</div></div>
+                <div class="col"><div class="box">2 of 3 (col)</div></div>
+                <div class="col"><div class="box">3 of 3 (col)</div></div>
+            </div>
+        </div>
+
+        <!-- SETTING ONE COLUMN WIDTH -->
+        <div class="component-section">
+            <span class="section-label">Setting one column width</span>
+            <div class="row mb-3">
+                <div class="col"><div class="box">1 of 3 (col)</div></div>
+                <div class="col-6"><div class="box">2 of 3 (col-6) (Wider)</div></div>
+                <div class="col"><div class="box">3 of 3 (col)</div></div>
+            </div>
+            <div class="row mb-3">
+                <div class="col"><div class="box">1 of 3 (col)</div></div>
+                <div class="col-5"><div class="box">2 of 3 (col-5) (Wider)</div></div>
+                <div class="col"><div class="box">3 of 3 (col)</div></div>
+            </div>
+        </div>
+
+        <!-- RESPONSIVE CLASSES -->
+        <div class="component-section">
+            <span class="section-label">Responsive Classes</span>
+            <div class="row mb-3">
+                <div class="col-sm-8"><div class="box">col-sm-8</div></div>
+                <div class="col-sm-4"><div class="box">col-sm-4</div></div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-sm"><div class="box">col-sm</div></div>
+                <div class="col-sm"><div class="box">col-sm</div></div>
+                <div class="col-sm"><div class="box">col-sm</div></div>
+            </div>
+            <p class="text-muted small">Resize browser untuk melihat perubahan layout berdasarkan breakpoint <code>sm</code>, <code>md</code>, <code>lg</code>, <code>xl</code>, <code>xxl</code>.</p>
+        </div>
+
+        <!-- MIX AND MATCH -->
+        <div class="component-section">
+            <span class="section-label">Mix and Match</span>
+            <div class="row mb-3">
+                <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+                <div class="col-md-8"><div class="box">.col-md-8</div></div>
+                <div class="col-6 col-md-4"><div class="box">.col-6 .col-md-4</div></div>
+            </div>
+            <div class="row mb-3">
+                <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+                <div class="col-6 col-md-4"><div class="box">.col-6 .col-md-4</div></div>
+                <div class="col-6 col-md-4"><div class="box">.col-6 .col-md-4</div></div>
+                <div class="col-6 col-md-4"><div class="box">.col-6 .col-md-4</div></div>
+            </div>
+        </div>
+
+        <!-- ROW COLUMNS -->
+        <div class="component-section">
+            <span class="section-label">Row Columns (Grid Cards)</span>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Kolom ini akan tampil 1 per baris di HP, 2 di tablet, dan 4 di desktop.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Menggunakan class <code>.row-cols-*</code> pada container baris (row).</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- GUTTERS -->
+        <div class="component-section">
+            <span class="section-label">Gutters (Jarak antar kolom/baris)</span>
+            <p class="mb-2">Horizontal Gutters (gx-5)</p>
+            <div class="row gx-5 mb-4">
+                <div class="col"><div class="box">Custom column padding</div></div>
+                <div class="col"><div class="box">Custom column padding</div></div>
+            </div>
+            
+            <p class="mb-2">Vertical Gutters (gy-3)</p>
+            <div class="row gy-3 mb-4">
+                <div class="col-6"><div class="box">Custom row padding</div></div>
+                <div class="col-6"><div class="box">Custom row padding</div></div>
+                <div class="col-6"><div class="box">Custom row padding</div></div>
+                <div class="col-6"><div class="box">Custom row padding</div></div>
+            </div>
+
+            <p class="mb-2">No Gutters (g-0)</p>
+            <div class="row g-0">
+                <div class="col-sm-6 col-md-8"><div class="box">.col-sm-6 .col-md-8</div></div>
+                <div class="col-6 col-md-4"><div class="box">.col-6 .col-md-4</div></div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="index.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> Kembali ke Index</a>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/copy-code.js"></script>
+</body>
+</html>
+

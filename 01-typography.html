@@ -1,0 +1,322 @@
+﻿<!DOCTYPE html>
+<html lang="id" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typography - Bootstrap 5.3 Template</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="icons/bootstrap-icons.min.css">
+    <style>
+        .component-section { 
+            border: 1px dashed var(--bs-border-color); 
+            border-radius: 8px; 
+            padding: 2rem; 
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        .section-label {
+            position: absolute;
+            top: -12px;
+            left: 16px;
+            background: var(--bs-body-bg);
+            padding: 0 8px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--bs-primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-bootstrap-fill text-primary"></i> Template Collection
+            </a>
+            <span class="navbar-text fw-semibold">01 â€” Typography</span>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <h1 class="display-5 fw-bold mb-2"><i class="bi bi-type text-primary"></i> Typography</h1>
+        <p class="lead text-muted mb-5">Headings, paragraphs, inline text, blockquotes, lists, dan display headings.</p>
+
+        <!-- ==================== HEADINGS ==================== -->
+        <div class="component-section">
+            <span class="section-label">Headings h1 - h6</span>
+            <h1>h1. Bootstrap heading</h1>
+            <h2>h2. Bootstrap heading</h2>
+            <h3>h3. Bootstrap heading</h3>
+            <h4>h4. Bootstrap heading</h4>
+            <h5>h5. Bootstrap heading</h5>
+            <h6>h6. Bootstrap heading</h6>
+        </div>
+
+        <!-- ==================== HEADING CLASSES ==================== -->
+        <div class="component-section">
+            <span class="section-label">Heading Classes (di elemen lain)</span>
+            <p class="h1">h1. Bootstrap heading (pakai class)</p>
+            <p class="h2">h2. Bootstrap heading (pakai class)</p>
+            <p class="h3">h3. Bootstrap heading (pakai class)</p>
+            <p class="h4">h4. Bootstrap heading (pakai class)</p>
+            <p class="h5">h5. Bootstrap heading (pakai class)</p>
+            <p class="h6">h6. Bootstrap heading (pakai class)</p>
+        </div>
+
+        <!-- ==================== DISPLAY HEADINGS ==================== -->
+        <div class="component-section">
+            <span class="section-label">Display Headings</span>
+            <h1 class="display-1">Display 1</h1>
+            <h1 class="display-2">Display 2</h1>
+            <h1 class="display-3">Display 3</h1>
+            <h1 class="display-4">Display 4</h1>
+            <h1 class="display-5">Display 5</h1>
+            <h1 class="display-6">Display 6</h1>
+        </div>
+
+        <!-- ==================== LEAD PARAGRAPH ==================== -->
+        <div class="component-section">
+            <span class="section-label">Lead Paragraph</span>
+            <p class="lead">
+                Ini adalah lead paragraph. Lead paragraph membuat teks menonjol dari paragraf biasa.
+                Cocok untuk intro atau ringkasan konten di bagian atas halaman.
+            </p>
+            <p>
+                Ini paragraf biasa untuk perbandingan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+        </div>
+
+        <!-- ==================== INLINE TEXT ELEMENTS ==================== -->
+        <div class="component-section">
+            <span class="section-label">Inline Text Elements</span>
+            <p>Kamu bisa menggunakan tag <mark>mark untuk highlight</mark> teks.</p>
+            <p><del>Teks ini sudah dihapus (deleted).</del></p>
+            <p><s>Teks ini sudah tidak akurat lagi (strikethrough).</s></p>
+            <p><ins>Teks ini merupakan tambahan baru (inserted).</ins></p>
+            <p><u>Teks ini bergaris bawah (underlined).</u></p>
+            <p><small>Teks ini berukuran kecil (small / fine print).</small></p>
+            <p><strong>Teks ini dicetak tebal (bold / strong).</strong></p>
+            <p><em>Teks ini dicetak miring (italicized / emphasis).</em></p>
+            <p><abbr title="attribute">attr</abbr> â€” Singkatan dengan tooltip</p>
+            <p><abbr title="HyperText Markup Language" class="initialism">HTML</abbr> â€” Initialism (sedikit lebih kecil)</p>
+        </div>
+
+        <!-- ==================== TEXT UTILITIES ==================== -->
+        <div class="component-section">
+            <span class="section-label">Text Utility Classes</span>
+            <p class="fw-bold">Teks bold (fw-bold)</p>
+            <p class="fw-bolder">Teks bolder (fw-bolder) â€” relatif terhadap parent</p>
+            <p class="fw-semibold">Teks semibold (fw-semibold)</p>
+            <p class="fw-medium">Teks medium (fw-medium)</p>
+            <p class="fw-normal">Teks normal weight (fw-normal)</p>
+            <p class="fw-light">Teks light (fw-light)</p>
+            <p class="fw-lighter">Teks lighter (fw-lighter)</p>
+            <p class="fst-italic">Teks italic (fst-italic)</p>
+            <p class="fst-normal">Teks normal style (fst-normal)</p>
+            <hr>
+            <p class="text-start">Teks rata kiri (text-start)</p>
+            <p class="text-center">Teks rata tengah (text-center)</p>
+            <p class="text-end">Teks rata kanan (text-end)</p>
+            <hr>
+            <p class="text-lowercase">TEKS LOWERCASE (text-lowercase)</p>
+            <p class="text-uppercase">teks uppercase (text-uppercase)</p>
+            <p class="text-capitalize">teks capitalize setiap kata (text-capitalize)</p>
+            <hr>
+            <p class="text-decoration-underline">Teks underline (text-decoration-underline)</p>
+            <p class="text-decoration-line-through">Teks line-through (text-decoration-line-through)</p>
+            <a href="#" class="text-decoration-none">Link tanpa underline (text-decoration-none)</a>
+            <hr>
+            <p class="lh-1">Line height 1 (lh-1). Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+            <p class="lh-sm">Line height sm (lh-sm). Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+            <p class="lh-base">Line height base (lh-base). Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+            <p class="lh-lg">Line height lg (lh-lg). Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+            <hr>
+            <p class="font-monospace">Teks monospace (font-monospace)</p>
+            <p class="fs-1">Font size 1 (fs-1)</p>
+            <p class="fs-2">Font size 2 (fs-2)</p>
+            <p class="fs-3">Font size 3 (fs-3)</p>
+            <p class="fs-4">Font size 4 (fs-4)</p>
+            <p class="fs-5">Font size 5 (fs-5)</p>
+            <p class="fs-6">Font size 6 (fs-6)</p>
+        </div>
+
+        <!-- ==================== TEXT COLORS ==================== -->
+        <div class="component-section">
+            <span class="section-label">Text Colors</span>
+            <p class="text-primary">.text-primary</p>
+            <p class="text-primary-emphasis">.text-primary-emphasis</p>
+            <p class="text-secondary">.text-secondary</p>
+            <p class="text-secondary-emphasis">.text-secondary-emphasis</p>
+            <p class="text-success">.text-success</p>
+            <p class="text-success-emphasis">.text-success-emphasis</p>
+            <p class="text-danger">.text-danger</p>
+            <p class="text-danger-emphasis">.text-danger-emphasis</p>
+            <p class="text-warning bg-dark">.text-warning</p>
+            <p class="text-warning-emphasis">.text-warning-emphasis</p>
+            <p class="text-info bg-dark">.text-info</p>
+            <p class="text-info-emphasis">.text-info-emphasis</p>
+            <p class="text-light bg-dark">.text-light</p>
+            <p class="text-dark">.text-dark</p>
+            <p class="text-body">.text-body</p>
+            <p class="text-body-emphasis">.text-body-emphasis</p>
+            <p class="text-body-secondary">.text-body-secondary</p>
+            <p class="text-body-tertiary">.text-body-tertiary</p>
+            <p class="text-muted">.text-muted</p>
+            <p class="text-black bg-light">.text-black</p>
+            <p class="text-white bg-dark">.text-white</p>
+            <p class="text-black-50 bg-light">.text-black-50</p>
+            <p class="text-white-50 bg-dark">.text-white-50</p>
+        </div>
+
+        <!-- ==================== BLOCKQUOTES ==================== -->
+        <div class="component-section">
+            <span class="section-label">Blockquotes</span>
+            
+            <h6 class="text-muted mb-3">Default Blockquote:</h6>
+            <blockquote class="blockquote">
+                <p>A well-known quote, contained in a blockquote element.</p>
+            </blockquote>
+
+            <h6 class="text-muted mb-3 mt-4">Blockquote dengan Sumber (figcaption):</h6>
+            <figure>
+                <blockquote class="blockquote">
+                    <p>A well-known quote, contained in a blockquote element.</p>
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                    Someone famous in <cite title="Source Title">Source Title</cite>
+                </figcaption>
+            </figure>
+
+            <h6 class="text-muted mb-3 mt-4">Blockquote Rata Tengah:</h6>
+            <figure class="text-center">
+                <blockquote class="blockquote">
+                    <p>A well-known quote, contained in a blockquote element.</p>
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                    Someone famous in <cite title="Source Title">Source Title</cite>
+                </figcaption>
+            </figure>
+
+            <h6 class="text-muted mb-3 mt-4">Blockquote Rata Kanan:</h6>
+            <figure class="text-end">
+                <blockquote class="blockquote">
+                    <p>A well-known quote, contained in a blockquote element.</p>
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                    Someone famous in <cite title="Source Title">Source Title</cite>
+                </figcaption>
+            </figure>
+        </div>
+
+        <!-- ==================== LISTS ==================== -->
+        <div class="component-section">
+            <span class="section-label">Lists</span>
+            
+            <div class="row">
+                <div class="col-md-4">
+                    <h6 class="text-muted mb-3">Unordered List:</h6>
+                    <ul>
+                        <li>Item pertama</li>
+                        <li>Item kedua
+                            <ul>
+                                <li>Sub-item 1</li>
+                                <li>Sub-item 2</li>
+                            </ul>
+                        </li>
+                        <li>Item ketiga</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="text-muted mb-3">Ordered List:</h6>
+                    <ol>
+                        <li>Item pertama</li>
+                        <li>Item kedua
+                            <ol>
+                                <li>Sub-item 1</li>
+                                <li>Sub-item 2</li>
+                            </ol>
+                        </li>
+                        <li>Item ketiga</li>
+                    </ol>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="text-muted mb-3">Unstyled List:</h6>
+                    <ul class="list-unstyled">
+                        <li>Item tanpa bullet</li>
+                        <li>Item lain tanpa bullet</li>
+                        <li>Nested tetap ada bullet:
+                            <ul>
+                                <li>Sub-item (ada bullet)</li>
+                                <li>Sub-item lain</li>
+                            </ul>
+                        </li>
+                        <li>Item terakhir</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h6 class="text-muted mb-3 mt-4">Inline List:</h6>
+            <ul class="list-inline">
+                <li class="list-inline-item">Item Pertama</li>
+                <li class="list-inline-item">Item Kedua</li>
+                <li class="list-inline-item">Item Ketiga</li>
+            </ul>
+
+            <h6 class="text-muted mb-3 mt-4">Description List:</h6>
+            <dl class="row">
+                <dt class="col-sm-3">Description lists</dt>
+                <dd class="col-sm-9">A description list is perfect for defining terms.</dd>
+                
+                <dt class="col-sm-3">Term</dt>
+                <dd class="col-sm-9">Definition for the term.</dd>
+                
+                <dt class="col-sm-3">Another term</dt>
+                <dd class="col-sm-9">
+                    <p>This definition has multiple paragraphs.</p>
+                    <p>And another paragraph for the same definition.</p>
+                </dd>
+                
+                <dt class="col-sm-3 text-truncate">Truncated term that is too long to fit</dt>
+                <dd class="col-sm-9">This can be useful when space is tight.</dd>
+            </dl>
+        </div>
+
+        <!-- ==================== TEXT TRUNCATION & WRAPPING ==================== -->
+        <div class="component-section">
+            <span class="section-label">Text Truncation & Wrapping</span>
+            
+            <h6 class="text-muted mb-3">Text Truncate (ellipsis):</h6>
+            <div class="row">
+                <div class="col-4 text-truncate">
+                    This text is quite long and will be truncated with an ellipsis when it overflows.
+                </div>
+            </div>
+
+            <h6 class="text-muted mb-3 mt-4">Text Wrap / Nowrap:</h6>
+            <div class="badge bg-primary text-wrap" style="width: 6rem;">
+                This text should wrap (text-wrap).
+            </div>
+            <div class="text-nowrap bg-light border mt-3" style="width: 8rem;">
+                This text should not wrap (text-nowrap) and will overflow.
+            </div>
+
+            <h6 class="text-muted mb-3 mt-4">Word Break:</h6>
+            <p class="text-break">mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm</p>
+        </div>
+
+        <!-- Back to Index -->
+        <div class="text-center mt-5">
+            <a href="index.html" class="btn btn-outline-primary">
+                <i class="bi bi-arrow-left"></i> Kembali ke Index
+            </a>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/copy-code.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,220 @@
+﻿<!DOCTYPE html>
+<html lang="id" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel - Bootstrap 5.3 Template</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="icons/bootstrap-icons.min.css">
+    <style>
+        .component-section { border: 1px dashed var(--bs-border-color); border-radius: 8px; padding: 2rem; margin-bottom: 2rem; position: relative; }
+        .section-label { position: absolute; top: -12px; left: 16px; background: var(--bs-body-bg); padding: 0 8px; font-size: 0.75rem; font-weight: 600; color: var(--bs-primary); text-transform: uppercase; letter-spacing: 1px; }
+        .carousel-placeholder { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); height: 400px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; }
+        .bg-2 { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+        .bg-3 { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-bootstrap-fill text-primary"></i> Template Collection</a>
+            <span class="navbar-text fw-semibold">10 â€” Carousel</span>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <h1 class="display-5 fw-bold mb-2"><i class="bi bi-images text-warning"></i> Carousel</h1>
+        <p class="lead text-muted mb-5">Slideshow component for cycling through elements, like a carousel.</p>
+
+        <!-- SLIDES ONLY -->
+        <div class="component-section">
+            <span class="section-label">Slides Only</span>
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner rounded">
+                    <div class="carousel-item active">
+                        <div class="carousel-placeholder w-100">First Slide</div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-placeholder bg-2 w-100">Second Slide</div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-placeholder bg-3 w-100">Third Slide</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- WITH CONTROLS -->
+        <div class="component-section">
+            <span class="section-label">With Controls</span>
+            <div id="carouselExampleControls" class="carousel slide">
+                <div class="carousel-inner rounded">
+                    <div class="carousel-item active">
+                        <div class="carousel-placeholder w-100">First Slide</div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-placeholder bg-2 w-100">Second Slide</div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-placeholder bg-3 w-100">Third Slide</div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- WITH INDICATORS & CAPTIONS -->
+        <div class="component-section">
+            <span class="section-label">With Indicators & Captions</span>
+            <div id="carouselExampleCaptions" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner rounded">
+                    <div class="carousel-item active">
+                        <div class="carousel-placeholder w-100">First Slide</div>
+                        <div class="carousel-caption d-none d-md-block text-white">
+                            <h5>First slide label</h5>
+                            <p>Some representative placeholder content for the first slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-placeholder bg-2 w-100">Second Slide</div>
+                        <div class="carousel-caption d-none d-md-block text-white">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-placeholder bg-3 w-100">Third Slide</div>
+                        <div class="carousel-caption d-none d-md-block text-white">
+                            <h5>Third slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- CROSSFADE -->
+        <div class="component-section">
+            <span class="section-label">Crossfade (Animasi Fade)</span>
+            <div id="carouselExampleFade" class="carousel slide carousel-fade">
+                <div class="carousel-inner rounded">
+                    <div class="carousel-item active">
+                        <div class="carousel-placeholder w-100">First Slide</div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-placeholder bg-2 w-100">Second Slide</div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-placeholder bg-3 w-100">Third Slide</div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- AUTOPLAY -->
+        <div class="component-section">
+            <span class="section-label">Autoplay & Interval</span>
+            <p class="text-muted small mb-3">Menggunakan atribut <code>data-bs-ride="carousel"</code> dan <code>data-bs-interval</code> per item.</p>
+            <div id="carouselExampleAutoplay" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner rounded">
+                    <div class="carousel-item active" data-bs-interval="2000">
+                        <div class="carousel-placeholder w-100">First Slide (2s)</div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="1000">
+                        <div class="carousel-placeholder bg-2 w-100">Second Slide (1s)</div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <div class="carousel-placeholder bg-3 w-100">Third Slide (3s)</div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplay" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplay" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- DARK VARIANT -->
+        <div class="component-section">
+            <span class="section-label">Dark Variant (Controls & Indicators Hitam)</span>
+            <div id="carouselExampleDark" class="carousel carousel-dark slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner rounded">
+                    <div class="carousel-item active">
+                        <div class="carousel-placeholder bg-light text-dark w-100">First Slide</div>
+                        <div class="carousel-caption d-none d-md-block text-dark">
+                            <h5>First slide label</h5>
+                            <p>Some representative placeholder content for the first slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-placeholder bg-secondary text-white w-100">Second Slide</div>
+                        <div class="carousel-caption d-none d-md-block text-dark">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-placeholder bg-light text-dark w-100">Third Slide</div>
+                        <div class="carousel-caption d-none d-md-block text-dark">
+                            <h5>Third slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="index.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> Kembali ke Index</a>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/copy-code.js"></script>
+</body>
+</html>
+

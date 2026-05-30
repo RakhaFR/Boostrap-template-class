@@ -1,0 +1,271 @@
+﻿<!DOCTYPE html>
+<html lang="id" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modals & Offcanvas - Bootstrap 5.3 Template</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="icons/bootstrap-icons.min.css">
+    <style>
+        .component-section { border: 1px dashed var(--bs-border-color); border-radius: 8px; padding: 2rem; margin-bottom: 2rem; position: relative; }
+        .section-label { position: absolute; top: -12px; left: 16px; background: var(--bs-body-bg); padding: 0 8px; font-size: 0.75rem; font-weight: 600; color: var(--bs-primary); text-transform: uppercase; letter-spacing: 1px; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-bootstrap-fill text-primary"></i> Template Collection</a>
+            <span class="navbar-text fw-semibold">07 â€” Modals & Offcanvas</span>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <h1 class="display-5 fw-bold mb-2"><i class="bi bi-window-stack text-primary"></i> Modals & Offcanvas</h1>
+        <p class="lead text-muted mb-5">Modal sizes, static backdrop, scrollable, centered, dan offcanvas directions.</p>
+
+        <!-- BASIC MODAL -->
+        <div class="component-section">
+            <span class="section-label">Basic Modal</span>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#basicModal">Launch Basic Modal</button>
+            <div class="modal fade" id="basicModal" tabindex="-1" aria-labelledby="basicModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="basicModalLabel">Modal title</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">Ini adalah konten modal dasar. Kamu bisa menaruh form, teks, gambar, atau apapun di sini.</div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- STATIC BACKDROP -->
+        <div class="component-section">
+            <span class="section-label">Static Backdrop (tidak bisa ditutup klik luar)</span>
+            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#staticBackdropModal">Static Backdrop Modal</button>
+            <div class="modal fade" id="staticBackdropModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropModalLabel">Static Backdrop</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">Modal ini tidak bisa ditutup dengan klik di luar. Harus tekan tombol Close atau X.</div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Understood</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SCROLLABLE MODAL -->
+        <div class="component-section">
+            <span class="section-label">Scrollable Modal</span>
+            <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#scrollableModal">Scrollable Modal</button>
+            <div class="modal fade" id="scrollableModal" tabindex="-1" aria-labelledby="scrollableModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="scrollableModalLabel">Scrollable Modal</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Konten panjang yang bisa di-scroll di dalam modal.</p>
+                            <p style="min-height: 800px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vel tincidunt luctus, nunc sapien aliquam nisl, quis aliquet nunc nisl eu nisi. Sed euismod, nisl vel tincidunt luctus.</p>
+                            <p>Akhir konten.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- VERTICALLY CENTERED -->
+        <div class="component-section">
+            <span class="section-label">Vertically Centered</span>
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#centeredModal">Centered Modal</button>
+            <div class="modal fade" id="centeredModal" tabindex="-1" aria-labelledby="centeredModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="centeredModalLabel">Vertically Centered</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">Modal ini berada di tengah vertikal layar menggunakan <code>modal-dialog-centered</code>.</div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MODAL SIZES -->
+        <div class="component-section">
+            <span class="section-label">Modal Sizes</span>
+            <div class="d-flex flex-wrap gap-2">
+                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalXl">Extra Large (xl)</button>
+                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalLg">Large (lg)</button>
+                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalSm">Small (sm)</button>
+            </div>
+            <!-- XL Modal -->
+            <div class="modal fade" id="modalXl" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-xl"><div class="modal-content">
+                    <div class="modal-header"><h5 class="modal-title">Extra Large Modal</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+                    <div class="modal-body">Ini modal XL (max-width: 1140px). Pakai class <code>modal-xl</code>.</div>
+                </div></div>
+            </div>
+            <!-- LG Modal -->
+            <div class="modal fade" id="modalLg" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-lg"><div class="modal-content">
+                    <div class="modal-header"><h5 class="modal-title">Large Modal</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+                    <div class="modal-body">Ini modal LG (max-width: 800px). Pakai class <code>modal-lg</code>.</div>
+                </div></div>
+            </div>
+            <!-- SM Modal -->
+            <div class="modal fade" id="modalSm" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-sm"><div class="modal-content">
+                    <div class="modal-header"><h5 class="modal-title">Small Modal</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+                    <div class="modal-body">Ini modal SM (max-width: 300px). Pakai class <code>modal-sm</code>.</div>
+                </div></div>
+            </div>
+        </div>
+
+        <!-- FULLSCREEN MODAL -->
+        <div class="component-section">
+            <span class="section-label">Fullscreen Modal</span>
+            <div class="d-flex flex-wrap gap-2">
+                <button class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalFullscreen">Fullscreen</button>
+                <button class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalFullscreenSm">Fullscreen below sm</button>
+                <button class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalFullscreenMd">Fullscreen below md</button>
+            </div>
+            <div class="modal fade" id="modalFullscreen" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen"><div class="modal-content">
+                    <div class="modal-header"><h5 class="modal-title">Fullscreen Modal</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+                    <div class="modal-body">Fullscreen modal. Class: <code>modal-fullscreen</code></div>
+                </div></div>
+            </div>
+            <div class="modal fade" id="modalFullscreenSm" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen-sm-down"><div class="modal-content">
+                    <div class="modal-header"><h5 class="modal-title">Fullscreen below SM</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+                    <div class="modal-body">Class: <code>modal-fullscreen-sm-down</code></div>
+                </div></div>
+            </div>
+            <div class="modal fade" id="modalFullscreenMd" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen-md-down"><div class="modal-content">
+                    <div class="modal-header"><h5 class="modal-title">Fullscreen below MD</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+                    <div class="modal-body">Class: <code>modal-fullscreen-md-down</code></div>
+                </div></div>
+            </div>
+        </div>
+
+        <!-- MODAL WITH FORM -->
+        <div class="component-section">
+            <span class="section-label">Modal dengan Form</span>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#formModal"><i class="bi bi-pencil"></i> Login Modal</button>
+            <div class="modal fade" id="formModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Login</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="modalEmail" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="modalEmail" placeholder="name@example.com">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="modalPassword" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="modalPassword">
+                                </div>
+                                <div class="form-check mb-3">
+                                    <input type="checkbox" class="form-check-input" id="modalRemember">
+                                    <label class="form-check-label" for="modalRemember">Remember me</label>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary">Login</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-5">
+        <h2 class="fw-bold mb-4"><i class="bi bi-layout-sidebar-reverse"></i> Offcanvas</h2>
+
+        <!-- OFFCANVAS DIRECTIONS -->
+        <div class="component-section">
+            <span class="section-label">Offcanvas Directions</span>
+            <div class="d-flex flex-wrap gap-2">
+                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasStart">Start (Left)</button>
+                <button class="btn btn-success" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasEnd">End (Right)</button>
+                <button class="btn btn-warning" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop">Top</button>
+                <button class="btn btn-danger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom">Bottom</button>
+            </div>
+            <!-- Start -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasStart" aria-labelledby="offcanvasStartLabel">
+                <div class="offcanvas-header"><h5 class="offcanvas-title" id="offcanvasStartLabel">Offcanvas Start</h5><button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button></div>
+                <div class="offcanvas-body"><p>Offcanvas dari kiri (default). Class: <code>offcanvas-start</code></p></div>
+            </div>
+            <!-- End -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasEnd">
+                <div class="offcanvas-header"><h5 class="offcanvas-title">Offcanvas End</h5><button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button></div>
+                <div class="offcanvas-body"><p>Offcanvas dari kanan. Class: <code>offcanvas-end</code></p></div>
+            </div>
+            <!-- Top -->
+            <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop">
+                <div class="offcanvas-header"><h5 class="offcanvas-title">Offcanvas Top</h5><button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button></div>
+                <div class="offcanvas-body"><p>Offcanvas dari atas. Class: <code>offcanvas-top</code></p></div>
+            </div>
+            <!-- Bottom -->
+            <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" style="height: 250px;">
+                <div class="offcanvas-header"><h5 class="offcanvas-title">Offcanvas Bottom</h5><button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button></div>
+                <div class="offcanvas-body"><p>Offcanvas dari bawah. Class: <code>offcanvas-bottom</code></p></div>
+            </div>
+        </div>
+
+        <!-- OFFCANVAS WITH BACKDROP OPTIONS -->
+        <div class="component-section">
+            <span class="section-label">Offcanvas Backdrop Options</span>
+            <div class="d-flex flex-wrap gap-2">
+                <button class="btn btn-outline-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScroll">Enable body scroll</button>
+                <button class="btn btn-outline-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNoBackdrop">No backdrop</button>
+                <button class="btn btn-outline-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBoth">Scroll + No backdrop</button>
+            </div>
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="true" tabindex="-1" id="offcanvasScroll">
+                <div class="offcanvas-header"><h5 class="offcanvas-title">Body Scroll</h5><button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button></div>
+                <div class="offcanvas-body"><p><code>data-bs-scroll="true"</code></p></div>
+            </div>
+            <div class="offcanvas offcanvas-start" data-bs-backdrop="false" tabindex="-1" id="offcanvasNoBackdrop">
+                <div class="offcanvas-header"><h5 class="offcanvas-title">No Backdrop</h5><button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button></div>
+                <div class="offcanvas-body"><p><code>data-bs-backdrop="false"</code></p></div>
+            </div>
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasBoth">
+                <div class="offcanvas-header"><h5 class="offcanvas-title">Scroll + No Backdrop</h5><button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button></div>
+                <div class="offcanvas-body"><p>Both scroll and no backdrop enabled.</p></div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="index.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> Kembali ke Index</a>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/copy-code.js"></script>
+</body>
+</html>
+

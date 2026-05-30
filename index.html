@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="id" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5.3 Template Collection - Koleksi Komponen Lengkap</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="icons/bootstrap-icons.min.css">
+    <style>
+        :root {
+            --bs-body-font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+        }
+        .card-template {
+            transition: all 0.3s ease;
+            border: none;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .card-template:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        .card-template .card-body {
+            padding: 1.5rem;
+        }
+        .card-template .bi {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        .badge-count {
+            font-size: 0.7rem;
+        }
+        .theme-toggle {
+            cursor: pointer;
+        }
+        footer {
+            background-color: #1a1a2e;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="bi bi-bootstrap-fill text-primary"></i> Template Collection
+            </a>
+            <div class="d-flex align-items-center gap-3">
+                <span class="badge bg-primary">Bootstrap 5.3.8</span>
+                <button class="btn btn-outline-secondary btn-sm theme-toggle" onclick="toggleTheme()">
+                    <i class="bi bi-moon-stars-fill"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-3">
+                <i class="bi bi-bootstrap-fill"></i> Bootstrap 5.3 Template Collection
+            </h1>
+            <p class="lead mb-4 opacity-75">Koleksi lengkap semua komponen Bootstrap — tinggal copy paste kode yang kamu butuhkan!</p>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="d-flex gap-3 justify-content-center flex-wrap">
+                        <span class="badge bg-light text-dark fs-6 px-3 py-2">
+                            <i class="bi bi-folder2-open"></i> 15+ Template Files
+                        </span>
+                        <span class="badge bg-light text-dark fs-6 px-3 py-2">
+                            <i class="bi bi-box"></i> 100+ Komponen
+                        </span>
+                        <span class="badge bg-light text-dark fs-6 px-3 py-2">
+                            <i class="bi bi-wifi-off"></i> 100% Offline
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Template Cards -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-2 fw-bold">Daftar Template</h2>
+            <p class="text-center text-muted mb-5">Klik kartu untuk membuka halaman template. Setiap halaman berisi kode siap pakai.</p>
+
+            <div class="row g-4">
+                <!-- 1. Typography -->
+                <div class="col-md-4 col-lg-3">
+                    <a href="01-typography.html" class="text-decoration-none">
+                        <div class="card card-template h-100 text-center">
+                            <div class="card-body">
+                                <i class="bi bi-type text-primary"></i>
+                                <h5 class="card-title">Typography</h5>
+                                <p class="card-text text-muted small">Headings, paragraphs, lead, blockquotes, lists, inline text elements</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 2. Buttons -->
+                <div class="col-md-4 col-lg-3">
+                    <a href="02-buttons.html" class="text-decoration-none">
+                        <div class="card card-template h-100 text-center">
+                            <div class="card-body">
+                                <i class="bi bi-hand-index text-success"></i>
+                                <h5 class="card-title">Buttons</h5>
+                                <p class="card-text text-muted small">Button variants, sizes, groups, outlines, loading states</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 3. Cards -->
+                <div class="col-md-4 col-lg-3">
+                    <a href="03-cards.html" class="text-decoration-none">
+                        <div class="card card-template h-100 text-center">
+                            <div class="card-body">
+                                <i class="bi bi-card-heading text-info"></i>
+                                <h5 class="card-title">Cards</h5>
+                                <p class="card-text text-muted small">Card layouts, image cards, horizontal cards, card groups</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 4. Navbar & Navigation -->
+                <div class="col-md-4 col-lg-3">
+                    <a href="04-navbar-navigation.html" class="text-decoration-none">
+                        <div class="card card-template h-100 text-center">
+                            <div class="card-body">
+                                <i class="bi bi-list text-warning"></i>
+                                <h5 class="card-title">Navbar & Navigation</h5>
+                                <p class="card-text text-muted small">Navbars, navs, tabs, pills, breadcrumbs, pagination</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 5. Forms -->
+                <div class="col-md-4 col-lg-3">
+                    <a href="05-forms.html" class="text-decoration-none">
+                        <div class="card card-template h-100 text-center">
+                            <div class="card-body">
+                                <i class="bi bi-input-cursor-text text-danger"></i>
+                                <h5 class="card-title">Forms</h5>
+                                <p class="card-text text-muted small">Inputs, selects, checkboxes, radios, range, floating labels, validation</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 6. Tables -->
+                <div class="col-md-4 col-lg-3">
+                    <a href="06-tables.html" class="text-decoration-none">
+                        <div class="card card-template h-100 text-center">
+                            <div class="card-body">
+                                <i class="bi bi-table text-secondary"></i>
+                                <h5 class="card-title">Tables</h5>
+                                <p class="card-text text-muted small">Striped, bordered, hoverable, responsive tables, dark variants</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 7. Modals & Offcanvas -->
+                <div class="col-md-4 col-lg-3">
+                    <a href="07-modals-offcanvas.html" class="text-decoration-none">
+                        <div class="card card-template h-100 text-center">
+                            <div class="card-body">
+                                <i class="bi bi-window-stack text-primary"></i>
+                                <h5 class="card-title">Modals & Offcanvas</h5>
+                                <p class="card-text text-muted small">Modal sizes, static backdrop, scrollable, offcanvas directions</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 8. Alerts & Toasts -->
+                <div class="col-md-4 col-lg-3">
+                    <a href="08-alerts-toasts.html" class="text-decoration-none">
+                        <div class="card card-template h-100 text-center">
+                            <div class="card-body">
+                                <i class="bi bi-bell text-success"></i>
+                                <h5 class="card-title">Alerts & Toasts</h5>
+                                <p class="card-text text-muted small">Alert variants, dismissible, icons, toast positions & auto-hide</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 9. Accordion & Collapse -->
+                <div class="col-md-4 col-lg-3">
+                    <a href="09-accordion-collapse.html" class="text-decoration-none">
+                        <div class="card card-template h-100 text-center">
+                            <div class="card-body">
+                                <i class="bi bi-arrows-collapse text-info"></i>
+                                <h5 class="card-title">Accordion & Collapse</h5>
+                                <p class="card-text text-muted small">Accordion, flush style, always open, collapse toggle</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 10. Carousel -->
+                <div class="col-md-4 col-lg-3">
+                    <a href="10-carousel.html" class="text-decoration-none">
+                        <div class="card card-template h-100 text-center">
+                            <div class="card-body">
+                                <i class="bi bi-images text-warning"></i>
+                                <h5 class="card-title">Carousel</h5>
+                                <p class="card-text text-muted small">Slides, captions, controls, indicators, crossfade, auto-play</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 11. Badges, Progress & Spinners -->
+                <div class="col-md-4 col-lg-3">
+                    <a href="11-badges-progress-spinners.html" class="text-decoration-none">
+                        <div class="card card-template h-100 text-center">
+                            <div class="card-body">
+                                <i class="bi bi-stars text-danger"></i>
+                                <h5 class="card-title">Badges, Progress & Spinners</h5>
+                                <p class="card-text text-muted small">Badge pills, progress bars, animated spinners, placeholders</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 12. List Group & Dropdowns -->
+                <div class="col-md-4 col-lg-3">
+                    <a href="12-listgroup-dropdowns.html" class="text-decoration-none">
+                        <div class="card card-template h-100 text-center">
+                            <div class="card-body">
+                                <i class="bi bi-list-ul text-secondary"></i>
+                                <h5 class="card-title">List Group & Dropdowns</h5>
+                                <p class="card-text text-muted small">List group variants, flush, active, dropdown directions</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 13. Tooltips, Popovers & Scrollspy -->
+                <div class="col-md-4 col-lg-3">
+                    <a href="13-tooltips-popovers.html" class="text-decoration-none">
+                        <div class="card card-template h-100 text-center">
+                            <div class="card-body">
+                                <i class="bi bi-chat-square-dots text-primary"></i>
+                                <h5 class="card-title">Tooltips & Popovers</h5>
+                                <p class="card-text text-muted small">Tooltip placements, popover content, scrollspy</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 14. Grid & Layout -->
+                <div class="col-md-4 col-lg-3">
+                    <a href="14-grid-layout.html" class="text-decoration-none">
+                        <div class="card card-template h-100 text-center">
+                            <div class="card-body">
+                                <i class="bi bi-grid-3x3-gap text-success"></i>
+                                <h5 class="card-title">Grid & Layout</h5>
+                                <p class="card-text text-muted small">Grid system, containers, rows, columns, gutters, flexbox utilities</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 15. Utilities -->
+                <div class="col-md-4 col-lg-3">
+                    <a href="15-utilities.html" class="text-decoration-none">
+                        <div class="card card-template h-100 text-center">
+                            <div class="card-body">
+                                <i class="bi bi-wrench text-info"></i>
+                                <h5 class="card-title">Utilities</h5>
+                                <p class="card-text text-muted small">Spacing, colors, borders, shadows, display, position, sizing</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 16. Full Page Templates -->
+                <div class="col-md-4 col-lg-3">
+                    <a href="16-page-templates.html" class="text-decoration-none">
+                        <div class="card card-template h-100 text-center border-primary">
+                            <div class="card-body">
+                                <i class="bi bi-layout-wtf text-warning"></i>
+                                <h5 class="card-title">Page Templates</h5>
+                                <p class="card-text text-muted small">Landing page, dashboard, login — siap pakai!</p>
+                                <span class="badge bg-primary badge-count">BONUS</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 17. Pricing -->
+                <div class="col-md-4 col-lg-3">
+                    <a href="17-bonus-pricing.html" class="text-decoration-none">
+                        <div class="card card-template h-100 text-center border-success">
+                            <div class="card-body">
+                                <i class="bi bi-tags text-success"></i>
+                                <h5 class="card-title">Pricing</h5>
+                                <p class="card-text text-muted small">Tabel harga dan perbandingan fitur layanan.</p>
+                                <span class="badge bg-success badge-count">BONUS</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 18. Features -->
+                <div class="col-md-4 col-lg-3">
+                    <a href="18-bonus-features.html" class="text-decoration-none">
+                        <div class="card card-template h-100 text-center border-info">
+                            <div class="card-body">
+                                <i class="bi bi-stars text-info"></i>
+                                <h5 class="card-title">Features</h5>
+                                <p class="card-text text-muted small">Layout untuk menampilkan fitur produk/jasa.</p>
+                                <span class="badge bg-info badge-count text-dark">BONUS</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 19. Sidebars -->
+                <div class="col-md-4 col-lg-3">
+                    <a href="19-bonus-sidebars.html" class="text-decoration-none">
+                        <div class="card card-template h-100 text-center border-dark">
+                            <div class="card-body">
+                                <i class="bi bi-layout-sidebar text-dark"></i>
+                                <h5 class="card-title">Sidebars</h5>
+                                <p class="card-text text-muted small">Variasi menu navigasi samping (Sidebar).</p>
+                                <span class="badge bg-dark badge-count">BONUS</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 20. Footers -->
+                <div class="col-md-4 col-lg-3">
+                    <a href="20-bonus-footers.html" class="text-decoration-none">
+                        <div class="card card-template h-100 text-center border-secondary">
+                            <div class="card-body">
+                                <i class="bi bi-card-heading text-secondary"></i>
+                                <h5 class="card-title">Footers</h5>
+                                <p class="card-text text-muted small">Berbagai opsi bagian bawah (Footer) website.</p>
+                                <span class="badge bg-secondary badge-count">BONUS</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="py-5 bg-body-secondary">
+        <div class="container">
+            <div class="row g-4 text-center">
+                <div class="col-md-4">
+                    <div class="p-4">
+                        <i class="bi bi-clipboard-check fs-1 text-primary"></i>
+                        <h5 class="mt-3">Copy Paste</h5>
+                        <p class="text-muted">Setiap komponen dilengkapi kode HTML yang bisa langsung di-copy ke project kamu.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4">
+                        <i class="bi bi-wifi-off fs-1 text-success"></i>
+                        <h5 class="mt-3">100% Offline</h5>
+                        <p class="text-muted">Semua file Bootstrap (CSS, JS, Icons) sudah tersedia lokal. Tidak perlu internet.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4">
+                        <i class="bi bi-phone fs-1 text-info"></i>
+                        <h5 class="mt-3">Responsive</h5>
+                        <p class="text-muted">Semua template sudah responsive dan siap digunakan di berbagai ukuran layar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cara Pakai -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">Cara Menggunakan</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="d-flex gap-3">
+                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 40px; height: 40px;">1</div>
+                        <div>
+                            <h6 class="fw-bold">Buka Template</h6>
+                            <p class="text-muted small">Klik template yang kamu butuhkan dari daftar di atas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex gap-3">
+                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 40px; height: 40px;">2</div>
+                        <div>
+                            <h6 class="fw-bold">Pilih Komponen</h6>
+                            <p class="text-muted small">Lihat preview dan pilih komponen yang sesuai kebutuhan.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex gap-3">
+                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 40px; height: 40px;">3</div>
+                        <div>
+                            <h6 class="fw-bold">Copy Kode</h6>
+                            <p class="text-muted small">Klik tombol "Copy" atau buka source code untuk copy HTML-nya.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-white py-4">
+        <div class="container text-center">
+            <p class="mb-1">Bootstrap 5.3.8 Template Collection</p>
+            <p class="small opacity-50 mb-0">File Bootstrap lokal — Siap pakai offline</p>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            const current = html.getAttribute('data-bs-theme');
+            html.setAttribute('data-bs-theme', current === 'dark' ? 'light' : 'dark');
+        }
+    </script>
+</body>
+</html>

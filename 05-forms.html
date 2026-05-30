@@ -1,0 +1,291 @@
+﻿<!DOCTYPE html>
+<html lang="id" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms - Bootstrap 5.3 Template</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="icons/bootstrap-icons.min.css">
+    <style>
+        .component-section { border: 1px dashed var(--bs-border-color); border-radius: 8px; padding: 2rem; margin-bottom: 2rem; position: relative; }
+        .section-label { position: absolute; top: -12px; left: 16px; background: var(--bs-body-bg); padding: 0 8px; font-size: 0.75rem; font-weight: 600; color: var(--bs-primary); text-transform: uppercase; letter-spacing: 1px; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-bootstrap-fill text-primary"></i> Template Collection</a>
+            <span class="navbar-text fw-semibold">05 â€” Forms</span>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <h1 class="display-5 fw-bold mb-2"><i class="bi bi-input-cursor-text text-danger"></i> Forms</h1>
+        <p class="lead text-muted mb-5">Input, select, checkbox, radio, textarea, floating labels, input group, dan validation.</p>
+
+        <!-- BASIC FORM CONTROLS -->
+        <div class="component-section">
+            <span class="section-label">Form Controls Dasar</span>
+            <div class="mb-3">
+                <label for="inputEmail" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="inputEmail" placeholder="name@example.com">
+                <div class="form-text">We'll never share your email.</div>
+            </div>
+            <div class="mb-3">
+                <label for="inputPassword" class="form-label">Password</label>
+                <input type="password" class="form-control" id="inputPassword">
+            </div>
+            <div class="mb-3">
+                <label for="inputTextarea" class="form-label">Textarea</label>
+                <textarea class="form-control" id="inputTextarea" rows="3" placeholder="Tulis sesuatu..."></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="disabledInput" class="form-label">Disabled input</label>
+                <input type="text" class="form-control" id="disabledInput" placeholder="Disabled input" disabled>
+            </div>
+            <div class="mb-3">
+                <label for="readonlyInput" class="form-label">Readonly input</label>
+                <input type="text" readonly class="form-control" id="readonlyInput" value="Read only value">
+            </div>
+            <div class="mb-3">
+                <label for="readonlyPlain" class="form-label">Readonly plain text</label>
+                <input type="text" readonly class="form-control-plaintext" id="readonlyPlain" value="email@example.com">
+            </div>
+            <div class="mb-3">
+                <label for="formControlColor" class="form-label">Color picker</label>
+                <input type="color" class="form-control form-control-color" id="formControlColor" value="#563d7c" title="Choose color">
+            </div>
+        </div>
+
+        <!-- FORM SIZING -->
+        <div class="component-section">
+            <span class="section-label">Form Control Sizes</span>
+            <input class="form-control form-control-lg mb-3" type="text" placeholder=".form-control-lg (Large)">
+            <input class="form-control mb-3" type="text" placeholder="Default input">
+            <input class="form-control form-control-sm mb-3" type="text" placeholder=".form-control-sm (Small)">
+        </div>
+
+        <!-- SELECT -->
+        <div class="component-section">
+            <span class="section-label">Select</span>
+            <select class="form-select mb-3" aria-label="Default select">
+                <option selected>Open this select menu</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+            <select class="form-select form-select-lg mb-3"><option selected>Large select</option></select>
+            <select class="form-select form-select-sm mb-3"><option selected>Small select</option></select>
+            <select class="form-select mb-3" multiple><option selected>Multiple select (hold Ctrl)</option><option>Two</option><option>Three</option></select>
+            <select class="form-select" size="3"><option selected>Size=3 select</option><option>Two</option><option>Three</option><option>Four</option></select>
+        </div>
+
+        <!-- CHECKS & RADIOS -->
+        <div class="component-section">
+            <span class="section-label">Checkboxes & Radios</span>
+            <h6 class="text-muted mb-3">Checkboxes:</h6>
+            <div class="form-check"><input class="form-check-input" type="checkbox" value="" id="check1"><label class="form-check-label" for="check1">Default checkbox</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" value="" id="check2" checked><label class="form-check-label" for="check2">Checked checkbox</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" value="" id="check3" disabled><label class="form-check-label" for="check3">Disabled checkbox</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" value="" id="checkIndet" checked><label class="form-check-label" for="checkIndet">Indeterminate (via JS)</label></div>
+
+            <h6 class="text-muted mb-3 mt-4">Radios:</h6>
+            <div class="form-check"><input class="form-check-input" type="radio" name="flexRadioDefault" id="radio1"><label class="form-check-label" for="radio1">Default radio</label></div>
+            <div class="form-check"><input class="form-check-input" type="radio" name="flexRadioDefault" id="radio2" checked><label class="form-check-label" for="radio2">Checked radio</label></div>
+            <div class="form-check"><input class="form-check-input" type="radio" name="flexRadioDisabled" id="radio3" disabled><label class="form-check-label" for="radio3">Disabled radio</label></div>
+
+            <h6 class="text-muted mb-3 mt-4">Switches:</h6>
+            <div class="form-check form-switch"><input class="form-check-input" type="checkbox" role="switch" id="switch1"><label class="form-check-label" for="switch1">Default switch</label></div>
+            <div class="form-check form-switch"><input class="form-check-input" type="checkbox" role="switch" id="switch2" checked><label class="form-check-label" for="switch2">Checked switch</label></div>
+            <div class="form-check form-switch"><input class="form-check-input" type="checkbox" role="switch" id="switch3" disabled><label class="form-check-label" for="switch3">Disabled switch</label></div>
+
+            <h6 class="text-muted mb-3 mt-4">Inline Checkboxes & Radios:</h6>
+            <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="inlineCheck1" value="opt1"><label class="form-check-label" for="inlineCheck1">1</label></div>
+            <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="inlineCheck2" value="opt2"><label class="form-check-label" for="inlineCheck2">2</label></div>
+            <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="inlineCheck3" value="opt3" disabled><label class="form-check-label" for="inlineCheck3">3 (disabled)</label></div>
+        </div>
+
+        <!-- RANGE -->
+        <div class="component-section">
+            <span class="section-label">Range</span>
+            <label for="customRange1" class="form-label">Default range</label>
+            <input type="range" class="form-range" id="customRange1">
+            <label for="customRange2" class="form-label">Range with min/max (0-5)</label>
+            <input type="range" class="form-range" min="0" max="5" id="customRange2">
+            <label for="customRange3" class="form-label">Range with steps (0-5, step 0.5)</label>
+            <input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3">
+            <label for="disabledRange" class="form-label">Disabled range</label>
+            <input type="range" class="form-range" id="disabledRange" disabled>
+        </div>
+
+        <!-- INPUT GROUPS -->
+        <div class="component-section">
+            <span class="section-label">Input Groups</span>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">@</span>
+                <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Recipient's username">
+                <span class="input-group-text">@example.com</span>
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text">$</span>
+                <input type="text" class="form-control" placeholder="Amount">
+                <span class="input-group-text">.00</span>
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text">Textarea</span>
+                <textarea class="form-control"></textarea>
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Search...">
+                <button class="btn btn-outline-secondary" type="button"><i class="bi bi-search"></i></button>
+            </div>
+            <div class="input-group mb-3">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">Dropdown</button>
+                <ul class="dropdown-menu"><li><a class="dropdown-item" href="#">Action</a></li><li><a class="dropdown-item" href="#">Another</a></li></ul>
+                <input type="text" class="form-control">
+            </div>
+
+            <h6 class="text-muted mb-3">Input Group Sizes:</h6>
+            <div class="input-group input-group-sm mb-3"><span class="input-group-text">Small</span><input type="text" class="form-control"></div>
+            <div class="input-group mb-3"><span class="input-group-text">Default</span><input type="text" class="form-control"></div>
+            <div class="input-group input-group-lg mb-3"><span class="input-group-text">Large</span><input type="text" class="form-control"></div>
+
+            <h6 class="text-muted mb-3">Checkbox & Radio in Input Group:</h6>
+            <div class="input-group mb-3">
+                <div class="input-group-text"><input class="form-check-input mt-0" type="checkbox" aria-label="Checkbox"></div>
+                <input type="text" class="form-control" placeholder="Checkbox input">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-text"><input class="form-check-input mt-0" type="radio" aria-label="Radio"></div>
+                <input type="text" class="form-control" placeholder="Radio input">
+            </div>
+        </div>
+
+        <!-- FLOATING LABELS -->
+        <div class="component-section">
+            <span class="section-label">Floating Labels</span>
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Email address</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">Password</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingValue" placeholder="name@example.com" value="test@example.com">
+                <label for="floatingValue">Input with value</label>
+            </div>
+            <div class="form-floating mb-3">
+                <textarea class="form-control" placeholder="Leave a comment" id="floatingTextarea" style="height: 100px"></textarea>
+                <label for="floatingTextarea">Comments</label>
+            </div>
+            <div class="form-floating mb-3">
+                <select class="form-select" id="floatingSelect">
+                    <option selected>Open this select menu</option>
+                    <option value="1">One</option><option value="2">Two</option><option value="3">Three</option>
+                </select>
+                <label for="floatingSelect">Works with selects</label>
+            </div>
+        </div>
+
+        <!-- FILE INPUT -->
+        <div class="component-section">
+            <span class="section-label">File Input</span>
+            <div class="mb-3"><label for="formFile" class="form-label">Default file input</label><input class="form-control" type="file" id="formFile"></div>
+            <div class="mb-3"><label for="formFileMultiple" class="form-label">Multiple files</label><input class="form-control" type="file" id="formFileMultiple" multiple></div>
+            <div class="mb-3"><label for="formFileDisabled" class="form-label">Disabled file input</label><input class="form-control" type="file" id="formFileDisabled" disabled></div>
+            <div class="mb-3"><label for="formFileSm" class="form-label">Small file input</label><input class="form-control form-control-sm" id="formFileSm" type="file"></div>
+            <div class="mb-3"><label for="formFileLg" class="form-label">Large file input</label><input class="form-control form-control-lg" id="formFileLg" type="file"></div>
+        </div>
+
+        <!-- FORM LAYOUT -->
+        <div class="component-section">
+            <span class="section-label">Form Layout - Horizontal</span>
+            <form>
+                <div class="row mb-3">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10"><input type="email" class="form-control" id="inputEmail3"></div>
+                </div>
+                <div class="row mb-3">
+                    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                    <div class="col-sm-10"><input type="password" class="form-control" id="inputPassword3"></div>
+                </div>
+                <fieldset class="row mb-3">
+                    <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
+                    <div class="col-sm-10">
+                        <div class="form-check"><input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="opt1" checked><label class="form-check-label" for="gridRadios1">First</label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="opt2"><label class="form-check-label" for="gridRadios2">Second</label></div>
+                    </div>
+                </fieldset>
+                <div class="row mb-3">
+                    <div class="col-sm-10 offset-sm-2">
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="gridCheck1"><label class="form-check-label" for="gridCheck1">Remember me</label></div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign in</button>
+            </form>
+        </div>
+
+        <!-- FORM LAYOUT GRID -->
+        <div class="component-section">
+            <span class="section-label">Form Layout - Grid (Kolom)</span>
+            <form class="row g-3">
+                <div class="col-md-6"><label for="inputFname" class="form-label">First Name</label><input type="text" class="form-control" id="inputFname"></div>
+                <div class="col-md-6"><label for="inputLname" class="form-label">Last Name</label><input type="text" class="form-control" id="inputLname"></div>
+                <div class="col-12"><label for="inputAddress" class="form-label">Address</label><input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St"></div>
+                <div class="col-md-6"><label for="inputCity" class="form-label">City</label><input type="text" class="form-control" id="inputCity"></div>
+                <div class="col-md-4">
+                    <label for="inputState" class="form-label">State</label>
+                    <select id="inputState" class="form-select"><option selected>Choose...</option><option>Jakarta</option><option>Bandung</option></select>
+                </div>
+                <div class="col-md-2"><label for="inputZip" class="form-label">Zip</label><input type="text" class="form-control" id="inputZip"></div>
+                <div class="col-12"><div class="form-check"><input class="form-check-input" type="checkbox" id="gridCheck2"><label class="form-check-label" for="gridCheck2">Check me out</label></div></div>
+                <div class="col-12"><button type="submit" class="btn btn-primary">Submit</button></div>
+            </form>
+        </div>
+
+        <!-- VALIDATION -->
+        <div class="component-section">
+            <span class="section-label">Form Validation</span>
+            <form class="row g-3">
+                <div class="col-md-4">
+                    <label for="validationSuccess" class="form-label">Valid input</label>
+                    <input type="text" class="form-control is-valid" id="validationSuccess" value="Mark" required>
+                    <div class="valid-feedback">Looks good!</div>
+                </div>
+                <div class="col-md-4">
+                    <label for="validationError" class="form-label">Invalid input</label>
+                    <input type="text" class="form-control is-invalid" id="validationError" required>
+                    <div class="invalid-feedback">Please provide a value.</div>
+                </div>
+                <div class="col-md-4">
+                    <label for="validationServer" class="form-label">With input group</label>
+                    <div class="input-group has-validation">
+                        <span class="input-group-text">@</span>
+                        <input type="text" class="form-control is-invalid" id="validationServer" required>
+                        <div class="invalid-feedback">Please choose a username.</div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-check">
+                        <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck">
+                        <label class="form-check-label" for="invalidCheck">Agree to terms</label>
+                        <div class="invalid-feedback">You must agree before submitting.</div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="index.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> Kembali ke Index</a>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/copy-code.js"></script>
+</body>
+</html>
+

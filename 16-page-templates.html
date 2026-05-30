@@ -1,0 +1,436 @@
+﻿<!DOCTYPE html>
+<html lang="id" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Templates - Bootstrap 5.3 Template</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="icons/bootstrap-icons.min.css">
+    <style>
+        .component-section { border: 1px dashed var(--bs-border-color); border-radius: 8px; padding: 2rem; margin-bottom: 2rem; position: relative; }
+        .section-label { position: absolute; top: -12px; left: 16px; background: var(--bs-body-bg); padding: 0 8px; font-size: 0.75rem; font-weight: 600; color: var(--bs-primary); text-transform: uppercase; letter-spacing: 1px; }
+        
+        /* Custom styles for the demo pages */
+        .demo-window { border: 1px solid var(--bs-border-color); border-radius: 0.5rem; overflow: hidden; box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15); margin-bottom: 2rem; }
+        .demo-window-header { background-color: var(--bs-tertiary-bg); padding: 0.5rem 1rem; border-bottom: 1px solid var(--bs-border-color); display: flex; align-items: center; gap: 0.5rem; }
+        .demo-dot { width: 12px; height: 12px; border-radius: 50%; }
+        .dot-red { background-color: #ff5f56; }
+        .dot-yellow { background-color: #ffbd2e; }
+        .dot-green { background-color: #27c93f; }
+        .demo-window-body { padding: 0; background-color: var(--bs-body-bg); position: relative; max-height: 500px; overflow-y: auto; }
+        
+        /* Code snippet toggle */
+        .code-snippet { display: none; background: #212529; color: #f8f9fa; padding: 1.5rem; border-radius: 0 0 0.5rem 0.5rem; margin-top: -2rem; margin-bottom: 2rem; position: relative; z-index: 1; }
+        .code-snippet pre { margin: 0; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-bootstrap-fill text-primary"></i> Template Collection</a>
+            <span class="navbar-text fw-semibold">16 â€” Page Templates (Bonus)</span>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <h1 class="display-5 fw-bold mb-2"><i class="bi bi-layout-wtf text-warning"></i> Page Templates</h1>
+        <p class="lead text-muted mb-5">Beberapa contoh struktur halaman jadi (Landing page, Login, Dashboard) menggunakan kombinasi komponen Bootstrap.</p>
+
+        <!-- 1. LOGIN PAGE FORM -->
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h4 class="fw-bold m-0">1. Login / Sign-in Form</h4>
+            <button class="btn btn-sm btn-outline-secondary" onclick="toggleCode('codeLogin')"><i class="bi bi-code-slash"></i> Lihat Kode</button>
+        </div>
+        
+        <div class="demo-window">
+            <div class="demo-window-header">
+                <div class="demo-dot dot-red"></div><div class="demo-dot dot-yellow"></div><div class="demo-dot dot-green"></div>
+                <small class="ms-2 text-muted">Login Form Centered</small>
+            </div>
+            <div class="demo-window-body p-5 bg-body-tertiary d-flex align-items-center justify-content-center" style="min-height: 400px;">
+                
+                <!-- LOGIN FORM CODE START -->
+                <div class="card shadow-sm" style="width: 100%; max-width: 400px;">
+                    <div class="card-body p-4">
+                        <div class="text-center mb-4">
+                            <i class="bi bi-bootstrap-fill text-primary display-4"></i>
+                            <h4 class="mt-2 fw-bold">Welcome back</h4>
+                            <p class="text-muted small">Please sign in to your account</p>
+                        </div>
+                        <form>
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="floatingInputLogin" placeholder="name@example.com">
+                                <label for="floatingInputLogin">Email address</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="password" class="form-control" id="floatingPasswordLogin" placeholder="Password">
+                                <label for="floatingPasswordLogin">Password</label>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="rememberMe">
+                                    <label class="form-check-label small" for="rememberMe">Remember me</label>
+                                </div>
+                                <a href="#" class="text-decoration-none small">Forgot password?</a>
+                            </div>
+                            <button class="btn btn-primary w-100 py-2 mb-3" type="submit">Sign in</button>
+                            <div class="text-center small">
+                                Don't have an account? <a href="#" class="text-decoration-none fw-bold">Sign up</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- LOGIN FORM CODE END -->
+
+            </div>
+        </div>
+        <div id="codeLogin" class="code-snippet">
+<pre><code>&lt;!-- Wrapper untuk center vertikal & horizontal --&gt;
+&lt;div class="d-flex align-items-center justify-content-center vh-100 bg-body-tertiary"&gt;
+    &lt;div class="card shadow-sm" style="width: 100%; max-width: 400px;"&gt;
+        &lt;div class="card-body p-4"&gt;
+            &lt;div class="text-center mb-4"&gt;
+                &lt;i class="bi bi-bootstrap-fill text-primary display-4"&gt;&lt;/i&gt;
+                &lt;h4 class="mt-2 fw-bold"&gt;Welcome back&lt;/h4&gt;
+                &lt;p class="text-muted small"&gt;Please sign in to your account&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;form&gt;
+                &lt;div class="form-floating mb-3"&gt;
+                    &lt;input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"&gt;
+                    &lt;label for="floatingInput"&gt;Email address&lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div class="form-floating mb-3"&gt;
+                    &lt;input type="password" class="form-control" id="floatingPassword" placeholder="Password"&gt;
+                    &lt;label for="floatingPassword"&gt;Password&lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div class="d-flex justify-content-between align-items-center mb-4"&gt;
+                    &lt;div class="form-check"&gt;
+                        &lt;input class="form-check-input" type="checkbox" id="rememberMe"&gt;
+                        &lt;label class="form-check-label small" for="rememberMe"&gt;Remember me&lt;/label&gt;
+                    &lt;/div&gt;
+                    &lt;a href="#" class="text-decoration-none small"&gt;Forgot password?&lt;/a&gt;
+                &lt;/div&gt;
+                &lt;button class="btn btn-primary w-100 py-2 mb-3" type="submit"&gt;Sign in&lt;/button&gt;
+                &lt;div class="text-center small"&gt;
+                    Don't have an account? &lt;a href="#" class="text-decoration-none fw-bold"&gt;Sign up&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/form&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+
+        <!-- 2. HERO LANDING PAGE -->
+        <div class="d-flex justify-content-between align-items-center mt-5 mb-3">
+            <h4 class="fw-bold m-0">2. Hero Header (Landing Page)</h4>
+            <button class="btn btn-sm btn-outline-secondary" onclick="toggleCode('codeHero')"><i class="bi bi-code-slash"></i> Lihat Kode</button>
+        </div>
+        
+        <div class="demo-window">
+            <div class="demo-window-header">
+                <div class="demo-dot dot-red"></div><div class="demo-dot dot-yellow"></div><div class="demo-dot dot-green"></div>
+                <small class="ms-2 text-muted">Hero Section</small>
+            </div>
+            <div class="demo-window-body">
+                
+                <!-- HERO CODE START -->
+                <div class="container col-xxl-8 px-4 py-5">
+                    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                        <div class="col-10 col-sm-8 col-lg-6">
+                            <div class="bg-primary bg-opacity-10 border border-primary border-opacity-25 rounded-3 d-flex align-items-center justify-content-center" style="height: 350px;">
+                                <i class="bi bi-image text-primary opacity-50 display-1"></i>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <h1 class="display-5 fw-bold text-body-emphasis mb-3">Membangun web cepat dengan Bootstrap 5</h1>
+                            <p class="lead">Desain responsive, komponen yang lengkap, dan utilitas yang powerful. Bangun project impianmu lebih cepat tanpa menulis CSS dari awal.</p>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-start mt-4">
+                                <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Mulai Sekarang</button>
+                                <button type="button" class="btn btn-outline-secondary btn-lg px-4">Dokumentasi</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- HERO CODE END -->
+
+            </div>
+        </div>
+        <div id="codeHero" class="code-snippet">
+<pre><code>&lt;!-- Hero Section (Responsive) --&gt;
+&lt;div class="container col-xxl-8 px-4 py-5"&gt;
+    &lt;div class="row flex-lg-row-reverse align-items-center g-5 py-5"&gt;
+        
+        &lt;!-- Gambar di kanan (Desktop), di atas (Mobile) --&gt;
+        &lt;div class="col-10 col-sm-8 col-lg-6"&gt;
+            &lt;img src="path-to-image.jpg" class="d-block mx-lg-auto img-fluid rounded-3 shadow" alt="Hero Image" width="700" height="500" loading="lazy"&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Teks di kiri --&gt;
+        &lt;div class="col-lg-6"&gt;
+            &lt;h1 class="display-5 fw-bold text-body-emphasis mb-3"&gt;Judul Hero Section Utama&lt;/h1&gt;
+            &lt;p class="lead"&gt;Deskripsi singkat produk atau layanan yang ditawarkan. Gunakan paragraf yang menarik agar pengunjung mau menekan tombol Call to Action di bawah.&lt;/p&gt;
+            &lt;div class="d-grid gap-2 d-md-flex justify-content-md-start mt-4"&gt;
+                &lt;button type="button" class="btn btn-primary btn-lg px-4 me-md-2"&gt;Primary Action&lt;/button&gt;
+                &lt;button type="button" class="btn btn-outline-secondary btn-lg px-4"&gt;Secondary&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+
+        <!-- 3. DASHBOARD LAYOUT -->
+        <div class="d-flex justify-content-between align-items-center mt-5 mb-3">
+            <h4 class="fw-bold m-0">3. Dashboard Sederhana (Sidebar + Navbar)</h4>
+            <button class="btn btn-sm btn-outline-secondary" onclick="toggleCode('codeDash')"><i class="bi bi-code-slash"></i> Lihat Kode</button>
+        </div>
+        
+        <div class="demo-window">
+            <div class="demo-window-header">
+                <div class="demo-dot dot-red"></div><div class="demo-dot dot-yellow"></div><div class="demo-dot dot-green"></div>
+                <small class="ms-2 text-muted">Admin Dashboard</small>
+            </div>
+            <div class="demo-window-body">
+                
+                <!-- DASHBOARD CODE START -->
+                <div class="d-flex" style="min-height: 500px;">
+                    <!-- Sidebar -->
+                    <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style="width: 280px;">
+                        <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                            <i class="bi bi-bootstrap-fill fs-4 me-2"></i>
+                            <span class="fs-4">AdminPro</span>
+                        </a>
+                        <hr>
+                        <ul class="nav nav-pills flex-column mb-auto">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link active" aria-current="page"><i class="bi bi-house me-2"></i> Dashboard</a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link text-white"><i class="bi bi-speedometer2 me-2"></i> Analytics</a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link text-white"><i class="bi bi-table me-2"></i> Orders</a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link text-white"><i class="bi bi-box me-2"></i> Products</a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link text-white"><i class="bi bi-people me-2"></i> Customers</a>
+                            </li>
+                        </ul>
+                        <hr>
+                        <div class="dropdown">
+                            <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-person-circle fs-4 me-2"></i>
+                                <strong>Admin User</strong>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+                                <li><a class="dropdown-item" href="#">New project...</a></li>
+                                <li><a class="dropdown-item" href="#">Settings</a></li>
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Sign out</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Main Content -->
+                    <div class="flex-grow-1 bg-light">
+                        <!-- Topnav -->
+                        <nav class="navbar navbar-expand-lg bg-white border-bottom px-4 py-3">
+                            <div class="container-fluid p-0">
+                                <span class="navbar-brand mb-0 h1 fw-bold">Dashboard Overview</span>
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="position-relative">
+                                        <i class="bi bi-bell fs-5"></i>
+                                        <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle"></span>
+                                    </div>
+                                    <form class="d-flex" role="search">
+                                        <input class="form-control form-control-sm" type="search" placeholder="Search..." aria-label="Search">
+                                    </form>
+                                </div>
+                            </div>
+                        </nav>
+                        
+                        <!-- Content -->
+                        <div class="p-4">
+                            <div class="row g-4 mb-4">
+                                <div class="col-md-3">
+                                    <div class="card border-0 shadow-sm">
+                                        <div class="card-body">
+                                            <h6 class="text-muted text-uppercase small fw-bold">Total Revenue</h6>
+                                            <h3 class="fw-bold mb-0">$24,500</h3>
+                                            <small class="text-success"><i class="bi bi-arrow-up-short"></i> 12% from last month</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card border-0 shadow-sm">
+                                        <div class="card-body">
+                                            <h6 class="text-muted text-uppercase small fw-bold">New Users</h6>
+                                            <h3 class="fw-bold mb-0">1,250</h3>
+                                            <small class="text-success"><i class="bi bi-arrow-up-short"></i> 5% from last month</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card border-0 shadow-sm">
+                                        <div class="card-body">
+                                            <h6 class="text-muted text-uppercase small fw-bold">Bounce Rate</h6>
+                                            <h3 class="fw-bold mb-0">45.2%</h3>
+                                            <small class="text-danger"><i class="bi bi-arrow-up-short"></i> 2% from last month</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card border-0 shadow-sm">
+                                        <div class="card-body">
+                                            <h6 class="text-muted text-uppercase small fw-bold">Active Sessions</h6>
+                                            <h3 class="fw-bold mb-0">340</h3>
+                                            <small class="text-muted">Live right now</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-header bg-white py-3">
+                                    <h5 class="mb-0 fw-bold">Recent Transactions</h5>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-hover align-middle mb-0">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th>Order ID</th>
+                                                <th>Customer</th>
+                                                <th>Date</th>
+                                                <th>Amount</th>
+                                                <th>Status</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>#ORD-001</td>
+                                                <td>John Doe</td>
+                                                <td>Today, 10:30 AM</td>
+                                                <td>$120.50</td>
+                                                <td><span class="badge bg-success rounded-pill">Completed</span></td>
+                                                <td><button class="btn btn-sm btn-outline-secondary">View</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>#ORD-002</td>
+                                                <td>Jane Smith</td>
+                                                <td>Today, 09:15 AM</td>
+                                                <td>$45.00</td>
+                                                <td><span class="badge bg-warning text-dark rounded-pill">Pending</span></td>
+                                                <td><button class="btn btn-sm btn-outline-secondary">View</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>#ORD-003</td>
+                                                <td>Bob Johnson</td>
+                                                <td>Yesterday</td>
+                                                <td>$299.99</td>
+                                                <td><span class="badge bg-danger rounded-pill">Cancelled</span></td>
+                                                <td><button class="btn btn-sm btn-outline-secondary">View</button></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- DASHBOARD CODE END -->
+
+            </div>
+        </div>
+        <div id="codeDash" class="code-snippet">
+<pre><code>&lt;!-- Pastikan body dan html memiliki class h-100 agar sidebar full height --&gt;
+&lt;div class="d-flex h-100"&gt;
+    
+    &lt;!-- SIDEBAR (Dark) --&gt;
+    &lt;div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style="width: 280px;"&gt;
+        &lt;a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"&gt;
+            &lt;span class="fs-4"&gt;AdminPanel&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;hr&gt;
+        &lt;ul class="nav nav-pills flex-column mb-auto"&gt;
+            &lt;li class="nav-item"&gt;
+                &lt;a href="#" class="nav-link active"&gt;&lt;i class="bi bi-house me-2"&gt;&lt;/i&gt; Dashboard&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" class="nav-link text-white"&gt;&lt;i class="bi bi-table me-2"&gt;&lt;/i&gt; Orders&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;!-- Tambahkan menu lain di sini --&gt;
+        &lt;/ul&gt;
+        &lt;hr&gt;
+        &lt;div class="dropdown"&gt;
+            &lt;a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown"&gt;
+                &lt;strong&gt;Admin User&lt;/strong&gt;
+            &lt;/a&gt;
+            &lt;ul class="dropdown-menu dropdown-menu-dark text-small shadow"&gt;
+                &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Profile&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;hr class="dropdown-divider"&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Sign out&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- MAIN CONTENT AREA --&gt;
+    &lt;div class="flex-grow-1 bg-light overflow-auto"&gt;
+        
+        &lt;!-- TOP NAVBAR --&gt;
+        &lt;nav class="navbar navbar-expand-lg bg-white border-bottom px-4 py-3"&gt;
+            &lt;div class="container-fluid p-0"&gt;
+                &lt;span class="navbar-brand mb-0 h1 fw-bold"&gt;Dashboard&lt;/span&gt;
+                &lt;!-- User info or search bar here --&gt;
+            &lt;/div&gt;
+        &lt;/nav&gt;
+        
+        &lt;!-- DASHBOARD CONTENT --&gt;
+        &lt;div class="p-4"&gt;
+            &lt;!-- Cards (Statistik) --&gt;
+            &lt;div class="row g-4 mb-4"&gt;
+                &lt;div class="col-md-3"&gt;
+                    &lt;div class="card border-0 shadow-sm"&gt;
+                        &lt;div class="card-body"&gt;
+                            &lt;h6 class="text-muted text-uppercase small"&gt;Total Sales&lt;/h6&gt;
+                            &lt;h3 class="mb-0"&gt;$24,500&lt;/h3&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            
+            &lt;!-- Data Table --&gt;
+            &lt;div class="card border-0 shadow-sm"&gt;
+                &lt;!-- Isi tabel transaksi --&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="index.html" class="btn btn-primary btn-lg"><i class="bi bi-house-door"></i> Kembali ke Halaman Utama</a>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        function toggleCode(id) {
+            const el = document.getElementById(id);
+            if (el.style.display === "block") {
+                el.style.display = "none";
+            } else {
+                el.style.display = "block";
+            }
+        }
+    </script>
+<script src="js/copy-code.js"></script>
+</body>
+</html>
+
